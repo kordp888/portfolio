@@ -88,6 +88,7 @@
   section.alt .card { background: var(--bg); }
   .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.09); }
   .card .emoji { font-size: 30px; margin-bottom: 16px; }
+  .card .app-icon { width: 56px; height: 56px; border-radius: 13px; margin-bottom: 16px; display:block; box-shadow: 0 2px 8px rgba(0,0,0,.10); }
   .card h3 { font-size: 22px; font-weight: 700; letter-spacing: -.01em; }
   .card .status { font-size: 12px; font-weight: 600; color: var(--accent); margin-top: 6px; }
   .card p { font-size: 15px; color: var(--ink-soft); margin-top: 12px; flex: 1; }
@@ -182,18 +183,20 @@
     <h2 data-ko>세 개의 증명.</h2>
     <div class="cards" style="text-align:left">
       <div class="card">
-        <div class="emoji">🚀</div>
+        <img class="app-icon" src="assets/signal-crew.png" alt="Signal Crew">
         <h3>Signal Crew</h3>
-        <div class="status" data-en>iOS released · Google Play in review</div>
-        <div class="status" data-ko>iOS 배포 완료 · Google Play 심사 중</div>
+        <div class="status" data-en>iOS beta · TestFlight</div>
+        <div class="status" data-ko>iOS 베타 테스트 중</div>
         <p data-en>AI-native SaaS unifying work, collaboration, and finance into one dashboard for solo founders and small teams.</p>
         <p data-ko>1인 창업자와 소규모 팀의 업무·협업·재무를 하나의 대시보드로 통합한 AI 네이티브 SaaS.</p>
         <div class="proof" data-en>Proof: I ship, end to end.</div>
         <div class="proof" data-ko>증명: 끝까지 배포한다.</div>
+        <a class="more" href="https://xn--2i0bs2de2jevkc6q.com" target="_blank" data-en>Website →</a>
+        <a class="more" href="https://xn--2i0bs2de2jevkc6q.com" target="_blank" data-ko>홈페이지 →</a>
         <a class="more" href="https://github.com/kordp888/signal-crew" target="_blank">GitHub →</a>
       </div>
       <div class="card">
-        <div class="emoji">❤️</div>
+        <img class="app-icon" src="assets/dasion5060.png" alt="다시ON 5060">
         <h3>다시ON5060</h3>
         <div class="status" data-en>Mission flagship · MVP live</div>
         <div class="status" data-ko>미션 대표 프로젝트 · MVP 운영 중</div>
