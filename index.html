@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Derrick Hwang — AI Native Product Manager</title>
+<title>Derrick Hwang · AI Native Product Manager</title>
 <meta name="description" content="AI Native Product Manager. Why comes first. Building comes next. Making AI accessible to everyone.">
 <style>
   :root {
-    --ink: #1d1d1f;
-    --ink-soft: #515154;
-    --ink-mute: #86868b;
-    --bg: #ffffff;
-    --bg-alt: #f5f5f7;
-    --accent: #0071e3;
+    --ink: #262320;
+    --ink-soft: #4A453E;
+    --ink-mute: #6F6A62;
+    --bg: #F0EEE9;
+    --bg-alt: #E9E6DF;
+    --accent: #07655F;
     --radius: 18px;
     --max: 980px;
   }
@@ -29,7 +29,7 @@
   /* Nav */
   nav {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(255,255,255,.8); backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(240,238,233,.86); backdrop-filter: saturate(140%) blur(18px);
     border-bottom: 1px solid rgba(0,0,0,.08);
   }
   .nav-in { display: flex; align-items: center; justify-content: space-between; height: 52px; }
@@ -124,6 +124,17 @@
   html.ko [data-en] { display: none; }
   html.ko [data-ko] { display: block; }
   html.ko span[data-ko], html.ko a[data-ko], html.ko b[data-ko] { display: inline; }
+
+  .rule-heavy { height:5px; background:var(--ink); max-width:760px; margin:0 auto 26px; }
+  .hero-stats { display:flex; gap:52px; justify-content:center; flex-wrap:wrap; margin-top:38px; }
+  .hero-stats div { text-align:left; }
+  .hero-stats b { display:block; font-size:44px; font-weight:700; letter-spacing:-1.5px; color:var(--ink); line-height:1.05; }
+  .hero-stats span { font-size:13px; color:var(--muted); margin-top:6px; }
+  .hero-stats span[data-en] { display:block; }
+  .hero-stats span[data-ko] { display:none; }
+  html.ko .hero-stats span[data-en] { display:none; }
+  html.ko .hero-stats span[data-ko] { display:block; }
+  @media (max-width:640px){ .hero-stats{gap:28px} .hero-stats b{font-size:32px} }
 </style>
 </head>
 <body>
@@ -146,16 +157,24 @@
 
 <header class="wrap">
   <img class="avatar" src="profile.jpg" alt="Derrick Hwang">
+  <div class="rule-heavy" aria-hidden="true"></div>
   <h1 data-en>Why comes first.<br>Building comes next.</h1>
-  <h1 data-ko>Why가 먼저다.<br>만드는 건 그 다음이다.</h1>
+  <h1 data-ko>왜 만드는지를 먼저 정합니다.</h1>
   <div class="role" data-en>AI Native Product Manager</div>
   <div class="role" data-ko>AI Native Product Manager</div>
   <p class="tagline" data-en>I don't build products because I have answers.<br>I build them because I keep asking "Why?"</p>
-  <p class="tagline" data-ko>답이 있어서 만들지 않습니다.<br>"왜?"라는 질문이 멈추지 않아서 만듭니다.</p>
+  <p class="tagline" data-ko>답이 있어서 만들지 않습니다. "왜?"라는 질문이 멈추지 않아서 만듭니다.</p>
+  <div class="hero-stats">
+    <div><b>6</b><span data-en>products shipped</span><span data-ko>배포한 제품</span></div>
+    <div><b>2</b><span data-en>team projects</span><span data-ko>팀 프로젝트</span></div>
+    <div><b>739</b><span data-en>unit tests</span><span data-ko>유닛테스트</span></div>
+    <div><b>58%</b><span data-en>prompt budget cut</span><span data-ko>프롬프트 예산 절감</span></div>
+  </div>
   <div class="hero-cta">
     <a class="btn" href="#projects" data-en>See what I build</a>
     <a class="btn" href="#projects" data-ko>프로젝트 보기</a>
-    <a class="btn ghost" href="https://github.com/kordp888" target="_blank">GitHub</a>
+    <a class="btn ghost" href="https://github.com/kordp888" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/derrick-hwang-846477422/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </header>
 
@@ -164,15 +183,15 @@
     <div class="kicker">Mission</div>
     <h2 data-en>AI, accessible to everyone.</h2>
     <h2 data-ko>AI를 누구나 쓸 수 있도록.</h2>
-    <p class="lead" data-en>Technology should adapt to people — not the other way around. I build AI for the people today's products ignore: seniors, children, multicultural families, non-technical users.</p>
-    <p class="lead" data-ko>기술이 사람에게 맞춰야 합니다. 사람이 기술에 맞추는 게 아니라. 저는 오늘의 AI 제품이 외면하는 사람들 — 시니어, 아이들, 다문화 가정, 비개발자 — 를 위해 만듭니다.</p>
+    <p class="lead" data-en>Technology should adapt to people. I build AI for the people today's products ignore: seniors, children, multicultural families, non-technical users.</p>
+    <p class="lead" data-ko>기술이 사람에게 맞춰야 합니다. 오늘의 AI 제품이 외면하는 사람들, 시니어와 아이들과 다문화 가정과 비개발자를 위해 만듭니다.</p>
     <div class="quotes">
-      <div class="quote" data-en>"I don't chase ideas. I chase unanswered questions."<span>— on problem discovery</span></div>
-      <div class="quote" data-ko>"아이디어를 쫓지 않는다. 답이 없는 질문을 쫓는다."<span>— 문제 발견에 대하여</span></div>
-      <div class="quote" data-en>"Technology should adapt to people."<span>— on accessibility</span></div>
-      <div class="quote" data-ko>"기술이 사람에게 맞춰야 한다."<span>— 접근성에 대하여</span></div>
-      <div class="quote" data-en>"Ship, measure, learn, repeat."<span>— on agile iteration</span></div>
-      <div class="quote" data-ko>"배포하고, 측정하고, 배우고, 반복한다."<span>— 애자일 반복에 대하여</span></div>
+      <div class="quote" data-en>"I don't chase ideas. I chase unanswered questions."<span>on problem discovery</span></div>
+      <div class="quote" data-ko>"아이디어를 쫓지 않는다. 답이 없는 질문을 쫓는다."<span>문제 발견에 대하여</span></div>
+      <div class="quote" data-en>"Technology should adapt to people."<span>on accessibility</span></div>
+      <div class="quote" data-ko>"기술이 사람에게 맞춰야 한다."<span>접근성에 대하여</span></div>
+      <div class="quote" data-en>"Ship, measure, learn, repeat."<span>on agile iteration</span></div>
+      <div class="quote" data-ko>"배포하고, 측정하고, 배우고, 반복한다."<span>애자일 반복에 대하여</span></div>
     </div>
   </div>
 </section>
@@ -183,15 +202,15 @@
     <div class="kicker">Story</div>
     <h2 data-en>It started in the comments.</h2>
     <h2 data-ko>댓글에서 시작됐습니다.</h2>
-    <p class="lead" data-en>Running content channels for Korean seniors, I watched the same scene every day: people in their 50s and 60s wanted to learn — but every app assumed they already knew where to tap.</p>
+    <p class="lead" data-en>Running content channels for Korean seniors, I watched the same scene every day: people in their 50s and 60s wanted to learn, but every app assumed they already knew where to tap.</p>
     <p class="lead" data-ko>시니어 대상 콘텐츠 채널을 운영하며 매일 같은 장면을 봤습니다. 50~60대는 배우고 싶어 하는데, 앱들은 그들이 어디를 눌러야 할지 이미 안다고 가정하고 있었습니다.</p>
     <div class="quotes">
-      <div class="quote" data-en>1 · Discover<span>Not from a market report — from watching real people get stuck, daily.</span></div>
-      <div class="quote" data-ko>1 · 발견<span>시장 보고서가 아니라, 매일 막히는 실제 사람들을 관찰한 것에서.</span></div>
-      <div class="quote" data-en>2 · Validate<span>Instead of writing a deck, I shipped 다시ON5060 — a voice-first PWA. Ask out loud, get walked through one step at a time.</span></div>
-      <div class="quote" data-ko>2 · 검증<span>기획서 대신 다시ON5060을 배포했습니다 — 음성으로 물으면 한 단계씩 알려주는 앱. 지금 운영 중입니다.</span></div>
+      <div class="quote" data-en>1 · Discover<span>Not from a market report, from watching real people get stuck, daily.</span></div>
+      <div class="quote" data-ko>1 · 발견<span>시장 보고서 말고, 매일 막히는 실제 사람들을 관찰한 데서.</span></div>
+      <div class="quote" data-en>2 · Validate<span>Instead of writing a deck, I shipped 다시ON5060, a voice-first PWA. Ask out loud, get walked through one step at a time.</span></div>
+      <div class="quote" data-ko>2 · 검증<span>기획서 대신 다시ON5060을 배포했습니다, 음성으로 물으면 한 단계씩 알려주는 앱. 지금 운영 중입니다.</span></div>
       <div class="quote" data-en>3 · Learn<span>Errors are the product's fault, never the user's. Every principle in the app came from observation, not opinion.</span></div>
-      <div class="quote" data-ko>3 · 원칙<span>에러는 사용자 탓이 아니라 제품 탓. 앱의 모든 원칙이 의견이 아니라 관찰에서 나왔습니다.</span></div>
+      <div class="quote" data-ko>3 · 원칙<span>에러는 사용자 탓이 아니라 제품 탓입니다. 앱의 모든 원칙을 관찰에서 끌어냈습니다.</span></div>
     </div>
   </div>
 </section>
@@ -229,25 +248,23 @@
         <a class="more" href="https://github.com/kordp888/dasi-on5060" target="_blank">GitHub →</a>
       </div>
       <div class="card">
-        <div class="emoji">🧠</div>
         <h3>LLM Wiki</h3>
         <div class="status" data-en>Running 24/7 on local sLLMs</div>
         <div class="status" data-ko>로컬 sLLM으로 24시간 운영 중</div>
-        <p data-en>A knowledge production system — agents and local sLLMs (Qwen, Gemma, EXAONE…) collect, distill, and connect knowledge around the clock.</p>
+        <p data-en>A knowledge production system, agents and local sLLMs (Qwen, Gemma, EXAONE…) collect, distill, and connect knowledge around the clock.</p>
         <p data-ko>에이전트와 로컬 sLLM(Qwen, Gemma, EXAONE…)이 지식을 수집·정제·연결하는 24시간 지식 생산 시스템.</p>
         <div class="proof" data-en>Proof: I build autonomous systems.</div>
         <div class="proof" data-ko>증명: 자율 시스템을 만든다.</div>
         <a class="more" href="https://github.com/kordp888/llm-wiki" target="_blank">GitHub →</a>
       </div>
       <div class="card">
-        <div class="emoji">🛡️</div>
         <h3>세이프체크</h3>
         <div class="status" data-en>Team of 5 · PM lead · shipped v7 prototype</div>
         <div class="status" data-ko>5인 팀 · PM 리드 · v7 프로토타입 발표</div>
-        <p data-en>Messenger security comparison service. User tests revealed people mistook us for antivirus — we redesigned the first screen around that finding and iterated v5→v7.</p>
+        <p data-en>Messenger security comparison service. User tests revealed people mistook us for antivirus, we redesigned the first screen around that finding and iterated v5→v7.</p>
         <p data-ko>메신저 보안 비교·추천 서비스. 유저테스트 녹취에서 "백신앱 오해"를 발견, 첫 화면을 재설계하고 v5→v7 반복 후 발표를 마쳤습니다.</p>
         <div class="proof" data-en>Proof: I lead teams with data, not opinions.</div>
-        <div class="proof" data-ko>증명: 의견이 아니라 데이터로 팀을 이끈다.</div>
+        <div class="proof" data-ko>증명: 데이터로 팀을 이끈다.</div>
       </div>
     </div>
   </div>
@@ -258,8 +275,8 @@
     <div class="kicker">Process</div>
     <h2 data-en>14 steps. One loop. Every product.</h2>
     <h2 data-ko>14단계, 하나의 루프.</h2>
-    <p class="lead" data-en>From problem discovery to AI-accelerated build, deployment, measurement, and agent automation — every product runs the same loop.</p>
-    <p class="lead" data-ko>문제 발견부터 AI 가속 빌드, 배포, 측정, 에이전트 자동화까지 — 모든 제품이 같은 루프를 돕니다.</p>
+    <p class="lead" data-en>From problem discovery to AI-accelerated build, deployment, measurement, and agent automation, every product runs the same loop.</p>
+    <p class="lead" data-ko>문제 발견부터 AI 가속 빌드, 배포, 측정, 에이전트 자동화까지, 모든 제품이 같은 루프를 돕니다.</p>
     <div class="loop">
       <div class="step"><b data-en>Discover</b><b data-ko>문제 발견</b></div><div class="arrow">→</div>
       <div class="step"><b>Why</b></div><div class="arrow">→</div>
