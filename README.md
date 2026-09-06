@@ -2,7 +2,7 @@
 
 AI Product Builder turning observed friction into shipped products. I start with why, validate with evidence, then build the smallest useful system that can reach production.
 
-**[View the live portfolio](https://kordp888.github.io/portfolio/)** · **[Open the Evidence Pack](./evidence/)** · **[Explore the product work](#selected-product-work)**
+**[View the live portfolio](https://kordp888.github.io/portfolio/)** · **[Open the Evidence Pack](./evidence/)** · **[Explore the product work](#product-portfolio)**
 
 ## Verification record
 
@@ -13,13 +13,14 @@ AI Product Builder turning observed friction into shipped products. I start with
 | ONDA verification | **205 tests passed across 27 files on 2026-09-06** |
 | LLM Wiki verification | **750 tests passed in a private verified environment on 2026-09-06** |
 
-## Selected product work
+## Product portfolio
 
 ### LLM Content Operations
 
 A private production workflow connects market data, scripts, voice, video, review, and publishing across four channels. The current upload path uses seven representative verification categories. Source inconsistencies and safety violations stop release. The operating record contains **319 cumulative publications as of 2026-09-01**.
 
 [Inspect the synthetic release-gate evidence](./evidence/content_automation/)
+· [Review the public quality-gate module](https://github.com/kordp888/llm-quality-gates)
 
 ### ONDA
 
@@ -50,6 +51,25 @@ A voice-first AI accessibility product for older Korean adults. It guides the us
 An AI-native SaaS product that unifies work, collaboration, and finance in one operating surface.
 
 [Explore Signal Crew](https://github.com/kordp888/signal-crew)
+
+### 세이프체크
+
+A messenger security comparison service developed by a five-person team. User tests showed that
+the first screen was being mistaken for antivirus software, so the flow was redesigned around
+that finding and iterated from v5 to v7. Team artifacts and interview transcripts remain private.
+
+### 린온
+
+A five-person hackathon product where children practice speaking with characters from Korean folk
+tales. Generated lines pass an age-focused vocabulary gate, while a three-stage fallback keeps the
+activity moving when speech or model calls fail. The implementation remains private.
+
+[Try 린온](https://lean-on-goodquestion.vercel.app)
+
+## Public tools
+
+- [LLM Quality Gates](https://github.com/kordp888/llm-quality-gates): extracted release-gate module with 78 passing tests and one optional integration test skipped.
+- [AI Tell Removal](https://github.com/kordp888/ai-tell-removal): command-line checker for repetitive, machine-like writing patterns.
 
 ## How I work
 

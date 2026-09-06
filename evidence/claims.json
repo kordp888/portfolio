@@ -329,6 +329,35 @@
       "status": "verified_private",
       "expires_at": "2026-10-06",
       "front_page": false
+    },
+    {
+      "id": "content_ops.public_gate_module_test_suite",
+      "value": {
+        "passed": 78,
+        "skipped": 1,
+        "failed": 0
+      },
+      "as_of": "2026-09-06",
+      "source": [
+        {
+          "kind": "public_repository",
+          "reference": "github:kordp888/llm-quality-gates@4a98ba440f0c2fb3c267f8c90852956351dcc8c2"
+        }
+      ],
+      "command": {
+        "run": "python -m pytest tests/ -q",
+        "expected": "78 passed, 1 skipped"
+      },
+      "scope": "프로덕션에서 분리한 공개 품질 게이트 모듈의 테스트 실행",
+      "public_copy_ko": "공개 품질 게이트 모듈의 테스트 78건이 통과했고 선택 통합 테스트 1건은 제외됐습니다.",
+      "public_copy_en": "The public quality-gate module passed 78 tests with one optional integration test skipped.",
+      "exclusions": [
+        "비공개 프로덕션 전체 테스트 수가 아닙니다.",
+        "선택 통합 테스트가 통과했다는 뜻은 아닙니다."
+      ],
+      "status": "verified_public",
+      "expires_at": null,
+      "front_page": false
     }
   ]
 }
