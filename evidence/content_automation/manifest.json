@@ -1,0 +1,29 @@
+{
+  "case_id": "content-automation-release-gate",
+  "pack_version": 1,
+  "last_verified": "2026-09-06",
+  "data_class": "synthetic",
+  "source_visibility": "production_source_omitted",
+  "evidence": [
+    {
+      "classification": "Observed",
+      "claim": "운영 코드 검토에서 출처 불일치와 안전 위반이 자동 업로드 경로를 차단하는 계약을 확인했습니다.",
+      "scope": "비공개 소스 검토"
+    },
+    {
+      "classification": "Reconstructed",
+      "claim": "합성 생성물의 수치를 합성 원본과 다르게 만들어 위험을 재구성했습니다.",
+      "scope": "공개 합성 입력"
+    },
+    {
+      "classification": "Verified",
+      "claim": "공개 하네스는 수치 불일치를 BLOCK으로 판정하고 다음 단계를 NONE으로 고정합니다.",
+      "scope": "evidence/content_automation 공개 하네스"
+    }
+  ],
+  "limitations": [
+    "공개 하네스는 프로덕션 소스의 복사본이 아닙니다.",
+    "누적 게시 319건의 개별 운영 이력을 공개 재현하지 않습니다.",
+    "대표 범주 7개가 전체 파이프라인의 모든 검사를 뜻하지 않습니다."
+  ]
+}

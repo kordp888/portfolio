@@ -1,0 +1,25 @@
+{
+  "classification": "Verified",
+  "contract": "additive_only",
+  "data_class": "synthetic",
+  "decision": "PASS",
+  "counts": {
+    "canonical_items_before": 3,
+    "canonical_items_after": 3,
+    "mobile_items": 3
+  },
+  "applied": [
+    "SYN-ITEM-A"
+  ],
+  "preserved_checked": [
+    "SYN-ITEM-B"
+  ],
+  "preserved_missing": [
+    "SYN-ITEM-C"
+  ],
+  "unmatched": [
+    "SYN-ITEM-D"
+  ],
+  "removed": [],
+  "unchecked": []
+}

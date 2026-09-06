@@ -1,0 +1,20 @@
+{
+  "data_class": "synthetic",
+  "items": [
+    {
+      "id": "SYN-ITEM-A",
+      "checked": false,
+      "title": "합성 항목 A"
+    },
+    {
+      "id": "SYN-ITEM-B",
+      "checked": true,
+      "title": "합성 항목 B"
+    },
+    {
+      "id": "SYN-ITEM-C",
+      "checked": false,
+      "title": "합성 항목 C"
+    }
+  ]
+}

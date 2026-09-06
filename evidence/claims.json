@@ -1,0 +1,334 @@
+{
+  "registry_version": 1,
+  "timezone": "Asia/Seoul",
+  "generated_at": "2026-09-06",
+  "status_values": [
+    "verified_public",
+    "verified_private",
+    "verified_historical",
+    "blocked_by_policy"
+  ],
+  "claims": [
+    {
+      "id": "content_ops.channels_operated",
+      "value": {
+        "count": 4,
+        "unit": "channel"
+      },
+      "as_of": "2026-09-01",
+      "source": [
+        {
+          "kind": "private_operating_record",
+          "reference": "content-channel-ledger"
+        }
+      ],
+      "command": null,
+      "scope": "같은 자동화 구조로 운영한 콘텐츠 채널 수",
+      "public_copy_ko": "같은 자동화 구조로 콘텐츠 채널 4개를 운영했습니다.",
+      "public_copy_en": "Operated four content channels on the same automation architecture.",
+      "exclusions": [
+        "네 채널이 현재 모두 활성 상태라는 뜻은 아닙니다.",
+        "고객사 수나 제품 사용자 수가 아닙니다."
+      ],
+      "status": "verified_historical",
+      "expires_at": null,
+      "front_page": true
+    },
+    {
+      "id": "content_ops.publications_cumulative",
+      "value": {
+        "count": 319,
+        "unit": "publication"
+      },
+      "as_of": "2026-09-01",
+      "source": [
+        {
+          "kind": "private_operating_record",
+          "reference": "content-publication-ledger"
+        }
+      ],
+      "command": null,
+      "scope": "네 채널에 게시된 콘텐츠의 누적 합계",
+      "public_copy_ko": "2026년 9월 1일 운영 기록 기준 누적 게시물은 319건입니다.",
+      "public_copy_en": "The operating record contains 319 cumulative publications as of September 1, 2026.",
+      "exclusions": [
+        "319건 전부가 현재 검증 범주를 거쳤다는 뜻은 아닙니다.",
+        "고유 콘텐츠 수, 성공 게시율, 정확도 지표가 아닙니다."
+      ],
+      "status": "verified_historical",
+      "expires_at": null,
+      "front_page": true
+    },
+    {
+      "id": "content_ops.representative_verification_categories",
+      "value": {
+        "count": 7,
+        "unit": "category"
+      },
+      "as_of": "2026-09-06",
+      "source": [
+        {
+          "kind": "private_source_review",
+          "reference": "content-verification-module"
+        },
+        {
+          "kind": "public_synthetic_harness",
+          "reference": "evidence/content_automation"
+        }
+      ],
+      "command": {
+        "run": "python3 -m unittest evidence.content_automation.test_validator",
+        "expected": "all tests pass"
+      },
+      "scope": "현재 자동 업로드 경로의 대표 검증 범주",
+      "public_copy_ko": "현재 자동 업로드 경로에 대표 검증 범주 7개를 적용했습니다.",
+      "public_copy_en": "Applied seven representative verification categories to the current automated upload path.",
+      "exclusions": [
+        "전체 콘텐츠 파이프라인의 모든 게이트가 7개라는 뜻은 아닙니다.",
+        "각 범주의 모든 판정이 하드페일인 것은 아닙니다.",
+        "공개 하네스는 프로덕션 소스가 아닙니다."
+      ],
+      "status": "verified_private",
+      "expires_at": "2026-09-13",
+      "front_page": true
+    },
+    {
+      "id": "content_ops.fail_closed_upload_path",
+      "value": {
+        "enabled": true
+      },
+      "as_of": "2026-09-06",
+      "source": [
+        {
+          "kind": "private_source_review",
+          "reference": "content-upload-gate"
+        },
+        {
+          "kind": "public_synthetic_harness",
+          "reference": "evidence/content_automation"
+        }
+      ],
+      "command": {
+        "run": "python3 -m unittest evidence.content_automation.test_validator",
+        "expected": "source and safety failures return BLOCK"
+      },
+      "scope": "현재 자동 업로드 코드 경로의 출처 및 안전 하드페일",
+      "public_copy_ko": "출처 불일치와 안전 위반은 자동 업로드를 중단합니다.",
+      "public_copy_en": "Source inconsistencies and safety violations stop the automated upload path.",
+      "exclusions": [
+        "수동 우회가 기술적으로 불가능하다는 뜻은 아닙니다.",
+        "오류가 외부에 나간 적이 없다는 뜻은 아닙니다."
+      ],
+      "status": "verified_private",
+      "expires_at": "2026-09-13",
+      "front_page": false
+    },
+    {
+      "id": "llm_wiki.test_suite",
+      "value": {
+        "passed": 750,
+        "failed": 0
+      },
+      "as_of": "2026-09-06",
+      "source": [
+        {
+          "kind": "private_verification_run",
+          "reference": "llm-wiki-snapshot:ff780907917800dac3924e92d2d24a40dfeccc85877d66cdb0f3eebc31ad7c85"
+        }
+      ],
+      "command": {
+        "run": "python -m unittest discover -s tests",
+        "expected": "750 tests pass"
+      },
+      "scope": "비공개 운영 원본의 전체 unittest 실행",
+      "public_copy_ko": "2026년 9월 6일 비공개 운영 원본의 테스트 750건이 통과했습니다.",
+      "public_copy_en": "The private implementation passed 750 tests on September 6, 2026.",
+      "exclusions": [
+        "공개 체크아웃에서 재현 가능하다는 뜻은 아닙니다.",
+        "현재 런타임 작업이 모두 활성 상태라는 뜻은 아닙니다."
+      ],
+      "status": "verified_private",
+      "expires_at": "2026-09-13",
+      "front_page": false
+    },
+    {
+      "id": "llm_wiki.human_approval_points",
+      "value": {
+        "count": 3,
+        "unit": "approval_point"
+      },
+      "as_of": "2026-09-06",
+      "source": [
+        {
+          "kind": "public_architecture",
+          "reference": "github:kordp888/llm-wiki"
+        }
+      ],
+      "command": null,
+      "scope": "엔티티 승인, 엔진 핸드오프, 데이터 엔진 활성화의 승인 경계",
+      "public_copy_ko": "엔티티 승인, 엔진 핸드오프, 데이터 엔진 활성화에 사람 승인 지점 3곳을 두었습니다.",
+      "public_copy_en": "Placed three human approval points at entity approval, engine handoff, and data-engine activation.",
+      "exclusions": [
+        "세 흐름이 현재 모두 활성 상태라는 뜻은 아닙니다.",
+        "하루에 승인이 반드시 세 번 발생한다는 뜻은 아닙니다."
+      ],
+      "status": "verified_private",
+      "expires_at": "2026-10-06",
+      "front_page": true
+    },
+    {
+      "id": "llm_wiki.sync_incident",
+      "value": {
+        "deleted_files": 171,
+        "remediation": "additive_only_sync"
+      },
+      "as_of": "2026-07",
+      "source": [
+        {
+          "kind": "private_incident_record",
+          "reference": "llm-wiki-sync-incident"
+        },
+        {
+          "kind": "public_synthetic_harness",
+          "reference": "evidence/llm_wiki"
+        }
+      ],
+      "command": {
+        "run": "python3 -m unittest evidence.llm_wiki.test_additive_sync",
+        "expected": "all additive-only contracts pass"
+      },
+      "scope": "양방향 동기화 삭제 사고와 이후 가산 전용 설계",
+      "public_copy_ko": "171개 파일 삭제 사고 뒤, 모바일 변경은 체크 추가만 허용하는 가산 전용 구조로 바꿨습니다.",
+      "public_copy_en": "After a 171-file deletion incident, mobile changes were restricted to additive-only check updates.",
+      "exclusions": [
+        "옛 동기화 구현의 정확한 삭제 경로를 공개 재현했다는 뜻은 아닙니다.",
+        "모든 종류의 파일 손실이 불가능하다는 뜻은 아닙니다."
+      ],
+      "status": "verified_historical",
+      "expires_at": null,
+      "front_page": false
+    },
+    {
+      "id": "onda.discovery_posts",
+      "value": {
+        "total": 49,
+        "source_a": 26,
+        "source_b": 23
+      },
+      "as_of": "2026-08",
+      "source": [
+        {
+          "kind": "private_research_record",
+          "reference": "onda-community-coding-table"
+        }
+      ],
+      "command": null,
+      "scope": "두 국내 Tesla 커뮤니티 게시판에서 분석한 글 수",
+      "public_copy_ko": "국내 Tesla 커뮤니티 글 49건을 분석해 제품 범위를 정했습니다.",
+      "public_copy_en": "Analyzed 49 Korean Tesla community posts to define the product scope.",
+      "exclusions": [
+        "사용자 인터뷰 49명을 수행했다는 뜻은 아닙니다.",
+        "통계적으로 대표성 있는 표본이라는 뜻은 아닙니다."
+      ],
+      "status": "verified_historical",
+      "expires_at": null,
+      "front_page": true
+    },
+    {
+      "id": "onda.test_suite",
+      "value": {
+        "files_passed": 27,
+        "tests_passed": 205,
+        "failed": 0
+      },
+      "as_of": "2026-09-06",
+      "source": [
+        {
+          "kind": "private_clean_commit",
+          "reference": "onda:4b245d3d984b03b26a06a8374a516332337d7ea4"
+        }
+      ],
+      "command": {
+        "run": "npm test",
+        "expected": "27 files and 205 tests pass"
+      },
+      "scope": "최신 비공개 개발 브랜치의 Vitest 실행",
+      "public_copy_ko": "2026년 9월 6일 개발 브랜치에서 테스트 파일 27개, 테스트 205건이 통과했습니다.",
+      "public_copy_en": "The development branch passed 205 tests across 27 files on September 6, 2026.",
+      "exclusions": [
+        "최신 릴리스 후보가 프로덕션에 배포됐다는 뜻은 아닙니다.",
+        "최종 실차 재검증이나 빌드 성공을 뜻하지 않습니다."
+      ],
+      "status": "verified_private",
+      "expires_at": "2026-09-13",
+      "front_page": false
+    },
+    {
+      "id": "onda.voice_rights_release_gate",
+      "value": {
+        "release_status": "blocked",
+        "reason": "missing_commercial_and_speaker_rights_evidence"
+      },
+      "as_of": "2026-09-06",
+      "source": [
+        {
+          "kind": "private_release_record",
+          "reference": "onda-voice-rights-gate"
+        },
+        {
+          "kind": "public_disclosure",
+          "reference": "github:kordp888/ONDA-for-Tesla-showcase"
+        }
+      ],
+      "command": {
+        "run": "npm run build",
+        "expected": "build is blocked by the voice approval gate"
+      },
+      "scope": "최신 릴리스 후보의 음성 자산 포함 빌드",
+      "public_copy_ko": "상업 이용과 화자 권리 증거가 없는 음성 자산은 빌드 단계에서 차단합니다.",
+      "public_copy_en": "Voice assets without commercial and speaker-rights evidence are blocked at build time.",
+      "exclusions": [
+        "제품 전체가 기술 실패로 빌드되지 않는다는 뜻은 아닙니다.",
+        "직전 공개 빌드가 철회됐다는 뜻은 아닙니다."
+      ],
+      "status": "blocked_by_policy",
+      "expires_at": "2026-09-13",
+      "front_page": false
+    },
+    {
+      "id": "onda.real_car_failures_to_regressions",
+      "value": {
+        "failure_classes": [
+          "high_frequency_gps_speed_calculation",
+          "missing_browser_speech_engine"
+        ],
+        "converted_to_regression_tests": true
+      },
+      "as_of": "2026-09-06",
+      "source": [
+        {
+          "kind": "private_real_car_session",
+          "reference": "onda-real-car-audio-and-gps"
+        },
+        {
+          "kind": "public_synthetic_harness",
+          "reference": "evidence/onda"
+        }
+      ],
+      "command": {
+        "run": "python3 -m unittest evidence.onda.test_speed_fallback",
+        "expected": "fixed timestamp case uses monotonic wall-clock fallback"
+      },
+      "scope": "실차에서 발견한 GPS 갱신과 음성 엔진 실패의 회귀 고정",
+      "public_copy_ko": "실차에서 확인한 GPS 갱신과 음성 엔진 실패를 회귀 테스트로 고정했습니다.",
+      "public_copy_en": "Converted real-car GPS update and speech-engine failures into regression tests.",
+      "exclusions": [
+        "최신 수정본의 최종 실차 재검증이 끝났다는 뜻은 아닙니다.",
+        "모든 Tesla 브라우저 환경의 호환성을 보장하지 않습니다."
+      ],
+      "status": "verified_private",
+      "expires_at": "2026-10-06",
+      "front_page": false
+    }
+  ]
+}

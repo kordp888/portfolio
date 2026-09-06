@@ -1,0 +1,7 @@
+{
+  "accepted": false,
+  "clock": "sensor",
+  "elapsed_ms": 0,
+  "speed_kmh": null,
+  "reason": "non_monotonic_time"
+}

@@ -1,0 +1,17 @@
+{
+  "data_class": "synthetic",
+  "items": [
+    {
+      "id": "SYN-ITEM-D",
+      "checked": true
+    },
+    {
+      "id": "SYN-ITEM-B",
+      "checked": false
+    },
+    {
+      "id": "SYN-ITEM-A",
+      "checked": true
+    }
+  ]
+}

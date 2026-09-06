@@ -1,0 +1,5 @@
+verified_at=2026-09-06
+command=python3 -m unittest evidence.llm_wiki.test_additive_sync
+result=PASS
+tests=11
+scope=public synthetic additive-only harness

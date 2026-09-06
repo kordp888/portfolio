@@ -1,0 +1,7 @@
+T+000ms classification=Verified data=synthetic
+T+001ms canonical_items=3 mobile_items=3
+T+002ms applied=SYN-ITEM-A
+T+003ms preserved_checked=SYN-ITEM-B
+T+004ms preserved_missing=SYN-ITEM-C
+T+005ms unmatched=SYN-ITEM-D
+T+006ms removed=0 unchecked=0 decision=PASS

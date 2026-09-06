@@ -1,0 +1,22 @@
+{
+  "evidence_class": "synthetic",
+  "unit": {
+    "distance": "metre",
+    "time": "millisecond",
+    "speed": "kilometre_per_hour"
+  },
+  "samples": [
+    {
+      "sample": "SYNTH-START",
+      "sensor_timestamp_ms": 1000000,
+      "wall_timestamp_ms": 2000000,
+      "distance_from_previous_m": 0.0
+    },
+    {
+      "sample": "SYNTH-NEXT",
+      "sensor_timestamp_ms": 1000000,
+      "wall_timestamp_ms": 2000500,
+      "distance_from_previous_m": 8.333
+    }
+  ]
+}

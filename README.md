@@ -2,9 +2,9 @@
 
 AI Product Builder turning observed friction into shipped products. I start with why, validate with evidence, then build the smallest useful system that can reach production.
 
-**[View the live portfolio](https://kordp888.github.io/portfolio/)** · **[Explore the product work](#selected-product-work)**
+**[View the live portfolio](https://kordp888.github.io/portfolio/)** · **[Open the Evidence Pack](./evidence/)** · **[Explore the product work](#selected-product-work)**
 
-## Proof in production
+## Verification record
 
 | Evidence | Result |
 |---|---:|
@@ -19,6 +19,8 @@ AI Product Builder turning observed friction into shipped products. I start with
 
 A private production workflow connects market data, scripts, voice, video, review, and publishing across four channels. The current upload path uses seven representative verification categories. Source inconsistencies and safety violations stop release. The operating record contains **319 cumulative publications as of 2026-09-01**.
 
+[Inspect the synthetic release-gate evidence](./evidence/content_automation/)
+
 ### ONDA
 
 A no-install driving home for the Tesla in-car browser. The product moved from **49 analyzed community posts** to a working deployment in **1 day**. The latest release candidate passed **205 tests across 27 files** and remains blocked until commercial voice-rights evidence is confirmed.
@@ -28,12 +30,14 @@ A no-install driving home for the Tesla in-car browser. The product moved from *
 </p>
 
 [View the ONDA showcase](https://github.com/kordp888/ONDA-for-Tesla-showcase)
+· [Inspect the GPS fallback evidence](./evidence/onda/)
 
 ### LLM Wiki
 
 A locally operated knowledge system using sLLMs, agents, deterministic checks, and human approval gates. Daily check-ins and the runtime guard are active; news collection and automatic publication are paused. The private implementation passed **750 tests** on 2026-09-06. This public repository contains architecture documentation rather than the implementation or test suite.
 
 [Read the architecture](https://github.com/kordp888/llm-wiki)
+· [Inspect the additive-only sync evidence](./evidence/llm_wiki/)
 
 ### 다시ON5060
 

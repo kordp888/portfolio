@@ -1,0 +1,1 @@
+"""Synthetic content automation evidence."""

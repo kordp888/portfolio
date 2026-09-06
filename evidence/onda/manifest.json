@@ -1,0 +1,29 @@
+{
+  "case_id": "onda-sensor-time-fallback",
+  "pack_version": 1,
+  "last_verified": "2026-09-06",
+  "data_class": "synthetic",
+  "source_visibility": "production_source_omitted",
+  "evidence": [
+    {
+      "classification": "Observed",
+      "claim": "실차 브라우저에서 연속 위치 표본의 센서 시각이 같아 속도 계산이 중단되는 상태를 확인했습니다.",
+      "scope": "비공개 실차 세션 기록"
+    },
+    {
+      "classification": "Reconstructed",
+      "claim": "실제 위치 없이 합성 이동 거리와 고정 센서 시각으로 실패를 재구성했습니다.",
+      "scope": "공개 합성 입력"
+    },
+    {
+      "classification": "Verified",
+      "claim": "공개 하네스는 센서 시각이 증가하지 않을 때 단조 증가 벽시계를 사용하고, 두 시각이 모두 유효하지 않으면 표본을 거부합니다.",
+      "scope": "evidence/onda 공개 하네스"
+    }
+  ],
+  "limitations": [
+    "실제 위치, 차량, 기기 식별자를 포함하지 않습니다.",
+    "최신 수정본의 최종 실차 재검증은 아직 끝나지 않았습니다.",
+    "브라우저 음성과 음성 자산 권리는 별도 릴리스 게이트입니다."
+  ]
+}

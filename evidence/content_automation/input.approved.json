@@ -1,0 +1,20 @@
+{
+  "source": {
+    "record_id": "SYN-MARKET-001",
+    "subject": "SAMPLE-A",
+    "change_pct": 2.5,
+    "direction": "up",
+    "as_of": "2026-09-06",
+    "source_id": "EXAMPLE-SOURCE-001"
+  },
+  "draft": {
+    "subject": "SAMPLE-A",
+    "change_pct": 2.5,
+    "direction": "up",
+    "as_of": "2026-09-06",
+    "source_id": "EXAMPLE-SOURCE-001",
+    "title": "SAMPLE-A 2.5% 상승",
+    "body": "공개된 원본 수치를 요약합니다.",
+    "human_approved": true
+  }
+}

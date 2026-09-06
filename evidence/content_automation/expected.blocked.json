@@ -1,0 +1,11 @@
+{
+  "decision": "BLOCK",
+  "next_stage": "NONE",
+  "issues": [
+    {
+      "category": "number_grounding",
+      "severity": "block",
+      "code": "source_number_mismatch"
+    }
+  ]
+}

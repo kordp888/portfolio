@@ -1,0 +1,29 @@
+{
+  "case_id": "llm-wiki-additive-sync",
+  "pack_version": 1,
+  "last_verified": "2026-09-06",
+  "data_class": "synthetic",
+  "source_visibility": "production_source_omitted",
+  "evidence": [
+    {
+      "classification": "Observed",
+      "claim": "동기화 사고로 운영 지식 파일 171개가 삭제됐습니다.",
+      "scope": "사고 결과"
+    },
+    {
+      "classification": "Reconstructed",
+      "claim": "합성 입력에서 삭제와 체크 해제를 변경 신호로 해석할 때의 위험을 설명합니다.",
+      "scope": "위험 모델이며 옛 구현 재현이 아님"
+    },
+    {
+      "classification": "Verified",
+      "claim": "공개 합성 하네스는 체크 추가만 허용하고 해제, 삭제, 미확인 항목 삽입을 차단합니다.",
+      "scope": "evidence/llm_wiki 공개 하네스"
+    }
+  ],
+  "limitations": [
+    "옛 동기화 구현의 정확한 삭제 경로를 재현하지 않습니다.",
+    "모든 파일 손실 가능성이 제거됐다는 뜻은 아닙니다.",
+    "공개 하네스는 프로덕션 소스의 복사본이 아닙니다."
+  ]
+}
