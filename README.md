@@ -52,6 +52,15 @@ An AI-native SaaS product that unifies work, collaboration, and finance in one o
 
 [Explore Signal Crew](https://github.com/kordp888/signal-crew)
 
+### AI Career Insight Coach
+
+An AI career coach that helps candidates find job-relevant insight in their own experience instead of
+generating generic application documents. The flow moves from industry, company, and job analysis to
+experience reflection, and only then into resume, cover letter, portfolio, and interview material.
+The public repository holds the product overview, open templates, and a fictional candidate example.
+
+[Explore AI Career Insight Coach](https://github.com/kordp888/career-insight-coach)
+
 ### 세이프체크
 
 A messenger security comparison service developed by a five-person team. User tests showed that
