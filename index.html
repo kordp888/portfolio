@@ -126,15 +126,13 @@
   html.ko span[data-ko], html.ko a[data-ko], html.ko b[data-ko] { display: inline; }
 
   .rule-heavy { height:5px; background:var(--ink); max-width:760px; margin:0 auto 26px; }
-  .hero-stats { display:flex; gap:52px; justify-content:center; flex-wrap:wrap; margin-top:38px; }
-  .hero-stats div { text-align:left; }
-  .hero-stats b { display:block; font-size:44px; font-weight:700; letter-spacing:-1.5px; color:var(--ink); line-height:1.05; }
-  .hero-stats span { font-size:13px; color:var(--muted); margin-top:6px; }
-  .hero-stats span[data-en] { display:block; }
-  .hero-stats span[data-ko] { display:none; }
-  html.ko .hero-stats span[data-en] { display:none; }
-  html.ko .hero-stats span[data-ko] { display:block; }
-  @media (max-width:640px){ .hero-stats{gap:28px} .hero-stats b{font-size:32px} }
+  .hero-stats { display:flex; gap:12px 30px; justify-content:center; flex-wrap:wrap; margin-top:38px; }
+  .hero-stats b { display:inline-flex; align-items:center; gap:10px; font-size:19px; font-weight:600; letter-spacing:-.01em; color:var(--ink); }
+  .hero-stats b::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--accent); }
+  .hero-stats b[data-ko] { display:none; }
+  html.ko .hero-stats b[data-en] { display:none; }
+  html.ko .hero-stats b[data-ko] { display:inline-flex; }
+  @media (max-width:640px){ .hero-stats{gap:10px 20px} .hero-stats b{font-size:16px} }
 </style>
 </head>
 <body>
@@ -165,10 +163,10 @@
   <p class="tagline" data-en>I don't build products because I have answers.<br>I build them because I keep asking "Why?"</p>
   <p class="tagline" data-ko>답이 있어서 만들지 않습니다. AI 자동화로 혼자 만드는 사람이 팀 규모로 일하게 만듭니다.</p>
   <div class="hero-stats">
-    <div><b>319</b><span data-en>cumulative publications</span><span data-ko>누적 콘텐츠 게시</span></div>
-    <div><b>7</b><span data-en>verification categories</span><span data-ko>대표 검증 범주</span></div>
-    <div><b>49</b><span data-en>ONDA research posts</span><span data-ko>ONDA 분석 게시물</span></div>
-    <div><b>3</b><span data-en>human approval points</span><span data-ko>사람 승인 지점</span></div>
+    <b data-en>Content operations</b><b data-ko>콘텐츠 운영</b>
+    <b data-en>Verification</b><b data-ko>검증</b>
+    <b data-en>User research</b><b data-ko>사용자 리서치</b>
+    <b data-en>Human approval</b><b data-ko>사람 승인</b>
   </div>
   <div class="hero-cta">
     <a class="btn" href="#projects" data-en>See what I build</a>
