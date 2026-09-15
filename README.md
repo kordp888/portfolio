@@ -78,7 +78,7 @@ activity moving when speech or model calls fail. The implementation remains priv
 ## Public tools
 
 - [LLM Quality Gates](https://github.com/kordp888/llm-quality-gates): extracted release-gate module with 78 passing tests and one optional integration test skipped.
-- [AI Tell Removal](https://github.com/kordp888/ai-tell-removal): command-line checker for repetitive, machine-like writing patterns.
+- [career-docs](https://github.com/kordp888/career-docs-skill): a Claude Code skill for job application documents. Pins dates and metrics to one source file, checks writing for machine-like patterns, exports print quality PDFs from HTML and PPTX, and strips generator metadata. The writing checker runs standalone.
 
 ## How I work
 
