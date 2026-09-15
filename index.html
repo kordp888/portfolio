@@ -89,6 +89,7 @@
   .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.09); }
   .card .emoji { font-size: 30px; margin-bottom: 16px; }
   .card .app-icon { width: 56px; height: 56px; border-radius: 13px; margin-bottom: 16px; display:block; box-shadow: 0 2px 8px rgba(0,0,0,.10); }
+  .card .shot { width: 100%; height: 168px; object-fit: cover; object-position: top center; border-radius: 10px; margin-bottom: 16px; display: block; border: 1px solid var(--line); background: #fff; }
   .card h3 { font-size: 22px; font-weight: 700; letter-spacing: -.01em; }
   .card .status { font-size: 12px; font-weight: 600; color: var(--accent); margin-top: 6px; }
   .card p { font-size: 15px; color: var(--ink-soft); margin-top: 12px; flex: 1; }
@@ -245,6 +246,18 @@
         <a class="more" href="https://github.com/kordp888/llm-wiki" target="_blank" rel="noopener">GitHub →</a>
         <a class="more" href="https://github.com/kordp888/portfolio/tree/main/evidence/llm_wiki" target="_blank" rel="noopener" data-en>Evidence Pack →</a>
         <a class="more" href="https://github.com/kordp888/portfolio/tree/main/evidence/llm_wiki" target="_blank" rel="noopener" data-ko>검증 자료 →</a>
+      </div>
+      <div class="card">
+        <img class="shot" src="assets/wesop.png" alt="ShopSol FLEX 가상 매장 근무표. 필요 5명, 확정 4명, 부족 1명.">
+        <h3>WESOP · ShopSol FLEX</h3>
+        <div class="status" data-en>Educational prototype · synthetic data · no user validation</div>
+        <div class="status" data-ko>교육용 프로토타입 · 합성 데이터 · 사용자 가설 미검증</div>
+        <p data-en>Staffing gaps move from detection to candidate comparison, offer, simulated acceptance, readiness check, and manager confirmation. Offering or accepting alone does not fill the shift, so the record shows what is actually confirmed.</p>
+        <p data-ko>부족 인원 확인에서 후보 비교와 제안을 거쳐 모의 수락, 준비 확인, 관리자 확정까지 이어집니다. 제안하거나 수락하는 것만으로는 인원이 채워지지 않게 해서, 기록에는 실제로 확정된 것만 남습니다.</p>
+        <div class="proof" data-en>Evidence: unit and build checks 58, public HTTPS browser checks 278, on 2026-09-09.</div>
+        <div class="proof" data-ko>근거: 2026-09-09 기준 단위·빌드 검사 58건, 공개 HTTPS 브라우저 검사 278건.</div>
+        <a class="more" href="https://wesop-shopsol-prototype.vercel.app/" target="_blank" rel="noopener" data-en>Open the prototype →</a>
+        <a class="more" href="https://wesop-shopsol-prototype.vercel.app/" target="_blank" rel="noopener" data-ko>프로토타입 열기 →</a>
       </div>
       <div class="card">
         <h3>ONDA</h3>

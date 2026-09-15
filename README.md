@@ -2,7 +2,7 @@
 
 AI Product Builder turning observed friction into shipped products. I start with why, validate with evidence, then build the smallest useful system that can reach production.
 
-**[View the live portfolio](https://kordp888.github.io/portfolio/)** · **[Open the Evidence Pack](./evidence/)** · **[Explore the product work](#product-portfolio)**
+**[View the live portfolio](https://kordp888.github.io/portfolio/)** · **[Open the Evidence Pack](./evidence/)** · **[Read the verification record](./VERIFICATION.md)** · **[Explore the product work](#product-portfolio)**
 
 ## Verification record
 
@@ -21,6 +21,16 @@ A private production workflow connects market data, scripts, voice, video, revie
 
 [Inspect the synthetic release-gate evidence](./evidence/content_automation/)
 · [Review the public quality-gate module](https://github.com/kordp888/llm-quality-gates)
+
+### WESOP · ShopSol FLEX
+
+An educational prototype for shift staffing. A gap moves from detection to candidate comparison,
+offer, simulated acceptance, readiness check, and manager confirmation. Offering or accepting alone
+does not fill the shift, so the record holds only what a manager actually confirmed. Archived QA on
+2026-09-09 records **58 unit and build checks and 278 public HTTPS browser checks**. No real
+participants and no physical device testing.
+
+[Open the prototype](https://wesop-shopsol-prototype.vercel.app/)
 
 ### ONDA
 
