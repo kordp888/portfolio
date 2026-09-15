@@ -8,10 +8,17 @@ AI Product Builder turning observed friction into shipped products. I start with
 
 | Evidence | Result |
 |---|---:|
+| Release gate, scheduled pipelines | **37 of 225 attempts blocked before release, 16.4%, on 2026-09-02** |
 | ONDA discovery research | **49 community posts analyzed** |
 | ONDA delivery | **1 day from planning to production** |
 | ONDA verification | **205 tests passed across 27 files on 2026-09-06** |
 | LLM Wiki verification | **750 tests passed in a private verified environment on 2026-09-06** |
+| WESOP archived QA | **58 unit and build checks, 278 public HTTPS browser checks, on 2026-09-09** |
+
+These measure different systems and are never added together. Every figure, its scope,
+and what it excludes live in [the evidence pack](./evidence/#숫자-한눈에), with the
+registry in [claims.json](./evidence/claims.json). Figures I could not measure, such as
+the gate false-positive rate, are recorded as not measured.
 
 ## Product portfolio
 

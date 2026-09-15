@@ -358,6 +358,113 @@
       "status": "verified_public",
       "expires_at": null,
       "front_page": false
+    },
+    {
+      "id": "content_ops.release_gate_block_rate",
+      "value": {
+        "reached": 225,
+        "blocked": 37,
+        "uploaded": 188,
+        "rate_percent": 16.4
+      },
+      "as_of": "2026-09-02",
+      "source": [
+        {
+          "kind": "private_operating_record",
+          "reference": "scheduled-pipeline-run-logs"
+        }
+      ],
+      "command": "for f in logs/*.out.log; do grep -c '업로드 완료' $f; grep -c '하드 실패' $f; done",
+      "scope": "정시 자동 파이프라인에서 업로드 게이트에 도달한 시도 225건 중 배포 직전에 차단된 37건. 분모는 게이트 도달 시도이며 앞 단계에서 걸러진 것은 제외한다.",
+      "public_copy_ko": "정시 파이프라인 기준 업로드 게이트 도달 225건 중 37건을 배포 직전에 차단했습니다. 차단율 16.4%입니다.",
+      "public_copy_en": "Of 225 attempts that reached the upload gate on scheduled pipelines, 37 were blocked just before release, a 16.4 percent block rate.",
+      "exclusions": [
+        "이미 승인된 편을 다시 렌더한 수동 재실행 로그 35건은 분모에서 제외했습니다. 포함하면 14.2%로 내려갑니다.",
+        "오탐률은 세지 않았습니다. 차단된 편을 사람이 다시 판정한 기록이 없어 차단 37건이 전부 진짜 문제였는지는 증명하지 못합니다.",
+        "재발률도 세지 않았습니다. 사유에 날짜 축을 붙이지 않았습니다."
+      ],
+      "status": "verified_private",
+      "expires_at": null,
+      "front_page": false
+    },
+    {
+      "id": "content_ops.release_gate_block_reasons",
+      "value": {
+        "total": 42,
+        "factual_error": 10,
+        "presentation": 30,
+        "system": 2
+      },
+      "as_of": "2026-09-02",
+      "source": [
+        {
+          "kind": "private_operating_record",
+          "reference": "scheduled-pipeline-run-logs"
+        }
+      ],
+      "command": null,
+      "scope": "차단 37건에서 나온 사유 42건의 분류. 한 편이 둘 이상의 사유에 걸린 경우가 있어 사유 수가 차단 수보다 많다.",
+      "public_copy_ko": "차단 37건에서 사유 42건이 나왔고 그중 사실 오류가 10건입니다.",
+      "public_copy_en": "The 37 blocked items produced 42 reasons, of which 10 were factual errors.",
+      "exclusions": [
+        "사유 42건은 차단 건수 37건과 다른 값입니다. 한 편이 둘 이상에 걸린 경우를 각각 셉니다.",
+        "가장 많은 단일 사유인 첫 화면 어두움 18건은 사실 오류가 아닙니다. 시청 이탈 요인입니다."
+      ],
+      "status": "verified_private",
+      "expires_at": null,
+      "front_page": false
+    },
+    {
+      "id": "wesop.archived_qa",
+      "value": {
+        "unit_and_build_checks": 58,
+        "public_https_browser_checks": 278,
+        "participants": 0
+      },
+      "as_of": "2026-09-09",
+      "source": [
+        {
+          "kind": "private_operating_record",
+          "reference": "wesop-prototype-qa-archive"
+        }
+      ],
+      "command": null,
+      "scope": "WESOP 교육용 프로토타입의 보관된 QA 기록. 단위·빌드 검사 58건과 공개 HTTPS 브라우저 검사 278건.",
+      "public_copy_ko": "WESOP 보관 QA 기록은 단위·빌드 검사 58건, 공개 HTTPS 브라우저 검사 278건입니다.",
+      "public_copy_en": "Archived WESOP QA records 58 unit and build checks and 278 public HTTPS browser checks.",
+      "exclusions": [
+        "실제 참여자는 0명이고 사용자 가설은 검증하지 않았습니다.",
+        "물리 기기 검사는 실행하지 않았습니다.",
+        "공개 화면의 매장·근무·후보는 합성 데이터입니다. 기업의 공식 출시 제품이 아닙니다."
+      ],
+      "status": "verified_private",
+      "expires_at": null,
+      "front_page": false
+    },
+    {
+      "id": "ops_tools.local_test_suite",
+      "value": {
+        "passed": 113,
+        "failed": 0
+      },
+      "as_of": "2026-09-13",
+      "source": [
+        {
+          "kind": "private_operating_record",
+          "reference": "ops-tooling-local-test-run"
+        }
+      ],
+      "command": null,
+      "scope": "운영 도구의 로컬 테스트를 macOS 에서 실행한 결과. 상태 조회, 문맥 선택, 제한 작업 위임, 중복 실행 방지, 로컬 연결 검사를 포함한다.",
+      "public_copy_ko": "운영 도구의 로컬 테스트 113건이 통과했습니다.",
+      "public_copy_en": "The operating tooling passed 113 local tests.",
+      "exclusions": [
+        "개별 제품 전체의 테스트 수가 아닙니다. LLM Wiki 750건, ONDA 205건과 다른 것을 잽니다.",
+        "상용 운영의 무오류를 보증하지 않습니다."
+      ],
+      "status": "verified_private",
+      "expires_at": null,
+      "front_page": false
     }
   ]
 }
