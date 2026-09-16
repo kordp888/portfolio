@@ -15,7 +15,7 @@
 | 4개 | 같은 자동화 구조로 운영한 채널 | 2026-09-01 |
 | 225 / 37 · 16.4% | 업로드 게이트 도달 시도와 배포 직전 차단, 차단율 | 2026-09-02 |
 | 42건 | 차단 37건에서 나온 사유. 사실 오류 10건 | 2026-09-02 |
-| 78건 | 공개 게이트 모듈 테스트 통과 (스킵 1) | 2026-09-06 |
+| 78건 | 게이트 모듈 테스트 통과 (스킵 1) · 비공개 | 2026-09-06 |
 | 750건 | LLM Wiki 테스트 통과 | 2026-09-06 |
 | 205건 / 27파일 | ONDA 테스트 통과 | 2026-09-06 |
 | 49건 | ONDA 출발점이 된 커뮤니티 글 | 2026-08 |
@@ -47,7 +47,7 @@
 
 | 제품 | 현재 공개 근거 | 비공개로 유지하는 것 |
 |---|---|---|
-| LLM Content Pipeline | [합성 차단 상태 전이](./content_automation/), [공개 품질 게이트 모듈](https://github.com/kordp888/llm-quality-gates) | 프로덕션 소스, 운영 원장, 채널 식별자 |
+| LLM Content Pipeline | [합성 차단 상태 전이](./content_automation/) | 프로덕션 소스, 운영 원장, 채널 식별자 |
 | LLM Wiki | [아키텍처 문서](https://github.com/kordp888/llm-wiki), [가산 전용 동기화 검증](./llm_wiki/) | 운영 위키 내용, 구현 원본, 비공개 테스트 스위트 |
 | ONDA | [공개 쇼케이스](https://github.com/kordp888/ONDA-for-Tesla-showcase), [GPS 폴백 검증](./onda/) | 앱 구현 원본, 실제 위치, 기기 식별자, 음성 자산 |
 | Signal Crew | [공개 제품 저장소](https://github.com/kordp888/signal-crew) | 비공개 개발 원본과 운영 데이터 |
@@ -59,7 +59,7 @@
 
 | 도구 | 공개 근거 |
 |---|---|
-| [LLM Quality Gates](https://github.com/kordp888/llm-quality-gates) | 공개 모듈 테스트 78건 통과, 선택 통합 테스트 1건 제외 |
+| LLM Quality Gates (비공개) | 게이트 모듈 테스트 78건 통과, 선택 통합 테스트 1건 제외. 요청 시 열람 |
 | [career-docs](https://github.com/kordp888/career-docs-skill) | 문서에서 반복되는 기계적 표현 패턴을 검사하는 공개 CLI 와 조판·변환 도구 |
 
 공개 문구의 정본은 [claims.json](./claims.json)입니다. 각 항목에 측정 시점, 범위,

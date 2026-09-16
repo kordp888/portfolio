@@ -29,7 +29,7 @@ the gate false-positive rate, are recorded as not measured.
 A private production workflow connects market data, scripts, voice, video, review, and publishing across four channels. The current upload path uses seven representative verification categories. Source inconsistencies and safety violations stop release. The operating record contains **319 cumulative publications as of 2026-09-01**.
 
 [Inspect the synthetic release-gate evidence](./evidence/content_automation/)
-· [Review the public quality-gate module](https://github.com/kordp888/llm-quality-gates)
+· Release-gate module: private, shown on request
 
 ### WESOP · ShopSol FLEX
 
@@ -96,7 +96,7 @@ activity moving when speech or model calls fail. The implementation remains priv
 
 ## Public tools
 
-- [LLM Quality Gates](https://github.com/kordp888/llm-quality-gates): extracted release-gate module with 78 passing tests and one optional integration test skipped.
+- LLM Quality Gates: release-gate module extracted from the content pipeline, 78 passing tests and one optional integration test skipped. Kept private; walkthrough available on request.
 - [career-docs](https://github.com/kordp888/career-docs-skill): a Claude Code skill for job application documents. Pins dates and metrics to one source file, checks writing for machine-like patterns, exports print quality PDFs from HTML and PPTX, and strips generator metadata. The writing checker runs standalone.
 
 ## How I work

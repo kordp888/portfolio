@@ -340,8 +340,8 @@
       "as_of": "2026-09-06",
       "source": [
         {
-          "kind": "public_repository",
-          "reference": "github:kordp888/llm-quality-gates@4a98ba440f0c2fb3c267f8c90852956351dcc8c2"
+          "kind": "private_repository",
+          "reference": "llm-quality-gates (private since 2026-09-16)"
         }
       ],
       "command": {
@@ -353,9 +353,10 @@
       "public_copy_en": "The public quality-gate module passed 78 tests with one optional integration test skipped.",
       "exclusions": [
         "비공개 프로덕션 전체 테스트 수가 아닙니다.",
-        "선택 통합 테스트가 통과했다는 뜻은 아닙니다."
+        "선택 통합 테스트가 통과했다는 뜻은 아닙니다.",
+        "저장소는 2026-09-16 부터 비공개입니다. 요청 시 열람합니다."
       ],
-      "status": "verified_public",
+      "status": "verified_private",
       "expires_at": null,
       "front_page": false
     },
