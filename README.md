@@ -1,5 +1,7 @@
 # Derrick Hwang
 
+[![evidence](https://github.com/kordp888/portfolio/actions/workflows/evidence.yml/badge.svg)](https://github.com/kordp888/portfolio/actions/workflows/evidence.yml)
+
 AI Product Builder turning observed friction into shipped products. I start with why, validate with evidence, then build the smallest useful system that can reach production.
 
 **[View the live portfolio](https://kordp888.github.io/portfolio/)** · **[Open the Evidence Pack](./evidence/)** · **[Read the verification record](./VERIFICATION.md)** · **[Explore the product work](#product-portfolio)**
