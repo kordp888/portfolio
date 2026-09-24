@@ -8,6 +8,8 @@ AI Product Builder turning observed friction into shipped products. I start with
 
 ## Verification record
 
+Entries past their review date stay as dated records until they are remeasured.
+
 | Evidence | Result |
 |---|---:|
 | Release gate, scheduled pipelines | **37 of 225 attempts blocked before release, 16.4%, on 2026-09-02** |
@@ -26,7 +28,7 @@ the gate false-positive rate, are recorded as not measured.
 
 ### LLM Content Operations
 
-A private production workflow connects market data, scripts, voice, video, review, and publishing across four channels. The current upload path uses seven representative verification categories. Source inconsistencies and safety violations stop release. The operating record contains **319 cumulative publications as of 2026-09-01**.
+A private production workflow connects market data, scripts, voice, video, review, and publishing across four channels. As of 2026-09-06, the upload path used seven representative verification categories. Source inconsistencies and safety violations stop release. The operating record contains **319 cumulative publications as of 2026-09-01**.
 
 [Inspect the synthetic release-gate evidence](./evidence/content_automation/)
 · Release-gate module: private, shown on request
@@ -43,7 +45,7 @@ participants and no physical device testing.
 
 ### ONDA
 
-A no-install driving home for the Tesla in-car browser. The product moved from **49 analyzed community posts** to a working deployment in **1 day**. The latest release candidate passed **205 tests across 27 files** and remains blocked until commercial voice-rights evidence is confirmed.
+A no-install driving home for the Tesla in-car browser. The product moved from **49 analyzed community posts** to a working deployment in **1 day**. As of 2026-09-06, the latest release candidate passed **205 tests across 27 files** and was blocked pending commercial voice-rights evidence.
 
 <p align="center">
   <img src="docs/screenshots/onda.png" alt="ONDA live service start screen">
@@ -94,7 +96,7 @@ activity moving when speech or model calls fail. The implementation remains priv
 
 [Try 린온](https://lean-on-goodquestion.vercel.app)
 
-## Public tools
+## Tools
 
 - LLM Quality Gates: release-gate module extracted from the content pipeline, 78 passing tests and one optional integration test skipped. Kept private; walkthrough available on request.
 - [career-docs](https://github.com/kordp888/career-docs-skill): a Claude Code skill for job application documents. Pins dates and metrics to one source file, checks writing for machine-like patterns, exports print quality PDFs from HTML and PPTX, and strips generator metadata. The writing checker runs standalone.
