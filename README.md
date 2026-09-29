@@ -18,11 +18,34 @@ Entries past their review date stay as dated records until they are remeasured.
 | ONDA verification | **205 tests passed across 27 files on 2026-09-06** |
 | LLM Wiki verification | **750 tests passed in a private verified environment on 2026-09-06** |
 | WESOP archived QA | **58 unit and build checks, 278 public HTTPS browser checks, on 2026-09-09** |
+| Franchise assistant persona UT | **30 → 41 of 44 correct, 7 → 9 of 12 held out, on 2026-09-29** |
+| Career Coach persona UT | **25 synthetic personas, 7 defect types found, on 2026-09-29** |
 
 These measure different systems and are never added together. Every figure, its scope,
 and what it excludes live in [the evidence pack](./evidence/#숫자-한눈에), with the
 registry in [claims.json](./evidence/claims.json). Figures I could not measure, such as
 the gate false-positive rate, are recorded as not measured.
+
+## Updates, 2026-09-29
+
+Summarized from the engine commits; prompt text, rules, and source stay private.
+
+- **AI Career Insight Coach** (3 commits): public web app moved to a local model on the operator's
+  machine. Fixes from the synthetic persona UT block schema-example insight titles and literal
+  line-break codes in code, stop adding outcomes or causal links the user never stated, suppress guidance text
+  and stock closings in cover letters, and make follow-up questions quote the user's own facts.
+- **Career Coach model**: gemma4:12b chosen on 2026-09-23 from five candidates on synthetic input
+  (industry analysis 60s, dialogue turn 10s, draft 22s; others failed on format, register, steering,
+  or time). Runs on Ollama with forced JSON, thinking off, temperature 0.3, 16,384-token context.
+  Turns usually take 5 to 8 seconds, some 40 to 50 for an unconfirmed reason. No training; load and
+  quality against an external API not measured.
+- **Franchise Operations AI Assistant** (defect fixes, UT script, re-measurement on the deployment): six
+  retrieval and intent defects fixed, each with a regression test that fails on the old code (85/85).
+  Added the 5-persona, 44-question UT script.
+- **Franchise assistant model**: six local setups (M1 Max 32GB, Ollama) and an external API were
+  benchmarked over 51 runs against a bar set in advance: zero missing required facts, under 6 seconds.
+  Best local was gemma4:12b with thinking off (6/30 adopted, 3 with missing facts, QA 27/51); the
+  external API reached QA 23/51. Thinking mode did not help. Production uses rule sentences (QA 51/51).
 
 ## Product portfolio
 
@@ -80,7 +103,29 @@ generating generic application documents. The flow moves from industry, company,
 experience reflection, and only then into resume, cover letter, portfolio, and interview material.
 The public repository holds the product overview, open templates, and a fictional candidate example.
 
-[Explore AI Career Insight Coach](https://github.com/kordp888/career-insight-coach)
+Since 2026-09-29 the production web app runs AI analysis on a local model (gemma4:12b) on the
+operator's Mac Studio M1 Max 32GB, and does not send it to an external AI service. Input still passes
+through the web app server and an encrypted connection to reach that machine, and AI analysis stops
+when the machine is off. The same day, **25 synthetic personas** were run end to end through dialogue,
+insight, and cover letter. Reading the output by hand found **7 defect types** the automated checks
+missed; prompts and rules were adjusted, with no model training. Re-verification covered 4 personas
+in 6 runs, not all 25, and no real users were involved.
+
+[Open the app](https://career-insight-coach.vercel.app)
+· [Explore AI Career Insight Coach](https://github.com/kordp888/career-insight-coach)
+
+### Franchise Operations AI Assistant
+
+An assistant beside the admin screen of a franchise operations SaaS. Managers ask about manuals,
+reviews, and hygiene inspections from the screen they are on, then edit and approve notice drafts.
+A deterministic rule engine decides intent, tools, and approval; the LLM is an optional summary layer
+whose sentences are discarded if they contain numbers, stores, or dates not in the data. Six local
+model setups and an external API were benchmarked over 51 runs, none met the bar of zero missing
+facts within 6 seconds, so production runs on rules. On 2026-09-29, five synthetic store-owner personas
+asked 44 scripted questions: correct answers rose from **30 to 41**, and from 7 to 9 on the 12 questions
+not used for fixing. Synthetic and dummy data only, zero real users. The client and brand are not named.
+
+[Read the case study and screens](./projects/franchise-agent/)
 
 ### 세이프체크
 
