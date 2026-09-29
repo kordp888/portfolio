@@ -482,9 +482,9 @@ function toggleLang() {
       <div class="log-item">
         <div><h3>커리어 코치 모델</h3><div class="when">선택 2026-09-23 · 운영 2026-09-29</div></div>
         <ul>
-          <li>후보 5개를 합성 입력으로 비교했습니다(M1 Pro 32GB). gemma4:12b는 산업 분석 60초, 대화 한 턴 10초, 자소서 초안 22초였고 사실 정확도, 존댓말, 이미 답한 주제 건너뛰기, 초안에 없는 사실 추가 없음으로 채택했습니다.</li>
+          <li>후보 5개를 합성 입력으로 비교했습니다(M1 계열 32GB Mac). gemma4:12b는 산업 분석 60초, 대화 한 턴 10초, 자소서 초안 22초였고 사실 정확도, 존댓말, 이미 답한 주제 건너뛰기, 초안에 없는 사실 추가 없음으로 채택했습니다.</li>
           <li>탈락 사유: exaone3.5:7.8b는 초안 형식 실패와 과장어, A.X-4.0-Light는 빠르지만 질문이 한쪽으로 유도됨, qwen2.5:14b는 반말과 반복, qwen3:32b는 산업 분석 159초로 제한 시간에 근접.</li>
-          <li>실행 설정: Ollama, JSON 출력 강제, 사고 모드 끔, 온도 0.3, 문맥 16,384 토큰. 모델 학습은 하지 않았습니다.</li>
+          <li>실행 설정: Ollama, JSON 출력 강제, 사고 모드 끔, 온도 0.3, 문맥 16,384 토큰, 요청 제한 시간 150초. 모델 학습은 하지 않았습니다.</li>
           <li>응답은 대화 한 턴에 대체로 5~8초이고 일부 요청은 40~50초였습니다. 원인은 확인하지 못했고 동시 접속 부하는 재지 않았습니다. 외부 API 대비 품질도 비교하지 않았습니다.</li>
         </ul>
       </div>
@@ -521,9 +521,9 @@ function toggleLang() {
       <div class="log-item">
         <div><h3>Career Coach model</h3><div class="when">chosen 2026-09-23 · live 2026-09-29</div></div>
         <ul>
-          <li>Five candidates were compared on synthetic input (M1 Pro 32GB). gemma4:12b took 60s for industry analysis, 10s per dialogue turn, and 22s for a cover-letter draft, and was chosen for factual accuracy, polite register, skipping topics already answered, and adding no facts absent from the draft.</li>
+          <li>Five candidates were compared on synthetic input (an M1-series 32GB Mac). gemma4:12b took 60s for industry analysis, 10s per dialogue turn, and 22s for a cover-letter draft, and was chosen for factual accuracy, polite register, skipping topics already answered, and adding no facts absent from the draft.</li>
           <li>Rejected: exaone3.5:7.8b failed the draft format and used hype words; A.X-4.0-Light was fast but steered questions; qwen2.5:14b used casual speech and repeated itself; qwen3:32b took 159s, near the time limit.</li>
-          <li>Runtime: Ollama, forced JSON output, thinking off, temperature 0.3, 16,384-token context. No model training.</li>
+          <li>Runtime: Ollama, forced JSON output, thinking off, temperature 0.3, 16,384-token context, 150-second request limit. No model training.</li>
           <li>A dialogue turn usually takes 5 to 8 seconds; some requests took 40 to 50 seconds for an unconfirmed reason. Concurrent load and quality against an external API were not measured.</li>
         </ul>
       </div>

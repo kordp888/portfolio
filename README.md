@@ -34,9 +34,9 @@ Summarized from the engine commits; prompt text, rules, and source stay private.
   machine. Fixes from the synthetic persona UT block schema-example insight titles and literal
   line-break codes in code, stop adding outcomes or causal links the user never stated, suppress guidance text
   and stock closings in cover letters, and make follow-up questions quote the user's own facts.
-- **Career Coach model**: gemma4:12b chosen on 2026-09-23 from five candidates on synthetic input
+- **Career Coach model**: gemma4:12b chosen on 2026-09-23 from five candidates on synthetic input on an M1-series 32GB Mac
   (industry analysis 60s, dialogue turn 10s, draft 22s; others failed on format, register, steering,
-  or time). Runs on Ollama with forced JSON, thinking off, temperature 0.3, 16,384-token context.
+  or time). Runs on Ollama with forced JSON, thinking off, temperature 0.3, 16,384-token context, 150-second request limit.
   Turns usually take 5 to 8 seconds, some 40 to 50 for an unconfirmed reason. No training; load and
   quality against an external API not measured.
 - **Franchise Operations AI Assistant** (defect fixes, UT script, re-measurement on the deployment): six
