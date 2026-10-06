@@ -32,7 +32,8 @@
       ],
       "status": "verified_historical",
       "expires_at": null,
-      "front_page": true
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "content_ops.publications_cumulative",
@@ -57,7 +58,8 @@
       ],
       "status": "verified_historical",
       "expires_at": null,
-      "front_page": true
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "content_ops.representative_verification_categories",
@@ -90,7 +92,8 @@
       ],
       "status": "verified_private",
       "expires_at": "2026-09-13",
-      "front_page": true
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "content_ops.fail_closed_upload_path",
@@ -121,7 +124,8 @@
       ],
       "status": "verified_private",
       "expires_at": "2026-09-13",
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "llm_wiki.test_suite",
@@ -149,7 +153,8 @@
       ],
       "status": "verified_private",
       "expires_at": "2026-09-13",
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "llm_wiki.human_approval_points",
@@ -174,7 +179,8 @@
       ],
       "status": "verified_private",
       "expires_at": "2026-10-06",
-      "front_page": true
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "llm_wiki.sync_incident",
@@ -206,7 +212,8 @@
       ],
       "status": "verified_historical",
       "expires_at": null,
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "onda.discovery_posts",
@@ -232,7 +239,8 @@
       ],
       "status": "verified_historical",
       "expires_at": null,
-      "front_page": true
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "onda.test_suite",
@@ -261,7 +269,8 @@
       ],
       "status": "verified_private",
       "expires_at": "2026-09-13",
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "onda.voice_rights_release_gate",
@@ -293,7 +302,8 @@
       ],
       "status": "blocked_by_policy",
       "expires_at": "2026-09-13",
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "onda.real_car_failures_to_regressions",
@@ -328,7 +338,8 @@
       ],
       "status": "verified_private",
       "expires_at": "2026-10-06",
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "content_ops.public_gate_module_test_suite",
@@ -358,7 +369,8 @@
       ],
       "status": "verified_private",
       "expires_at": null,
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "content_ops.release_gate_block_rate",
@@ -377,16 +389,22 @@
       ],
       "command": "for f in logs/*.out.log; do grep -c '업로드 완료' $f; grep -c '하드 실패' $f; done",
       "scope": "정시 자동 파이프라인에서 업로드 게이트에 도달한 시도 225건 중 배포 직전에 차단된 37건. 분모는 게이트 도달 시도이며 앞 단계에서 걸러진 것은 제외한다.",
-      "public_copy_ko": "정시 파이프라인 기준 업로드 게이트 도달 225건 중 37건을 배포 직전에 차단했습니다. 차단율 16.4%입니다.",
-      "public_copy_en": "Of 225 attempts that reached the upload gate on scheduled pipelines, 37 were blocked just before release, a 16.4 percent block rate.",
+      "public_copy_ko": "2026.09.09 정리한 과거 운영 집계에서 정시 파이프라인의 업로드 게이트 도달 225건 중 37건이 차단됐습니다. 원시 로그는 이번에 재집계하지 않았습니다.",
+      "public_copy_en": "In the historical operating summary compiled on 2026-09-09, 37 of 225 scheduled-pipeline attempts reaching the upload gate were blocked. Raw logs were not recounted for this update.",
       "exclusions": [
         "이미 승인된 편을 다시 렌더한 수동 재실행 로그 35건은 분모에서 제외했습니다. 포함하면 14.2%로 내려갑니다.",
         "오탐률은 세지 않았습니다. 차단된 편을 사람이 다시 판정한 기록이 없어 차단 37건이 전부 진짜 문제였는지는 증명하지 못합니다.",
-        "재발률도 세지 않았습니다. 사유에 날짜 축을 붙이지 않았습니다."
+        "재발률도 세지 않았습니다. 사유에 날짜 축을 붙이지 않았습니다.",
+        "기존 as_of 2026-09-02는 보관된 표기입니다. 측정 기간으로 재확인하지 않았습니다.",
+        "정확도·오류 탐지율·효율 개선률이 아닙니다."
       ],
       "status": "verified_private",
       "expires_at": null,
-      "front_page": false
+      "front_page": true,
+      "current_review": "archived_not_reverified",
+      "as_of_semantics": "legacy_record_label_measurement_period_unverified",
+      "compiled_at": "2026-09-09",
+      "measurement_period": null
     },
     {
       "id": "content_ops.release_gate_block_reasons",
@@ -413,7 +431,8 @@
       ],
       "status": "verified_private",
       "expires_at": null,
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "wesop.archived_qa",
@@ -440,7 +459,8 @@
       ],
       "status": "verified_private",
       "expires_at": null,
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "ops_tools.local_test_suite",
@@ -465,7 +485,8 @@
       ],
       "status": "verified_private",
       "expires_at": null,
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "franchise_agent.persona_ut",
@@ -499,7 +520,8 @@
       ],
       "status": "verified_private",
       "expires_at": null,
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "career_coach.persona_ut",
@@ -529,7 +551,8 @@
       ],
       "status": "verified_private",
       "expires_at": null,
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     },
     {
       "id": "franchise_agent.model_benchmark",
@@ -563,7 +586,10 @@
       ],
       "status": "verified_private",
       "expires_at": null,
-      "front_page": false
+      "front_page": false,
+      "current_review": "archived_not_reverified"
     }
-  ]
+  ],
+  "reviewed_at": "2026-10-06",
+  "review_note": "기존 기록은 보관 자료이며 이번 편집에서 원본 로그와 비공개 시험을 재검증하지 않았습니다. front_page는 현재 대표 사례에서의 사용 여부입니다."
 }

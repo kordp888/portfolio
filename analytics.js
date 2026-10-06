@@ -48,7 +48,7 @@ function track(event, params) {
 
 const projectOf = (el) => {
   const card = el.closest('.card');
-  return card ? card.querySelector('h3').textContent.trim() : null;
+  return card ? card.id : null;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const host = new URL(a.href).hostname;
       track('outbound_click', {
         destination: host,
-        link_text: a.textContent.trim(),
         project: projectOf(a),
         placement: a.closest('.card') ? 'project_card'
                  : a.closest('header') ? 'hero'
@@ -72,9 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.querySelectorAll('.card a, .card summary').forEach(el => {
+    el.addEventListener('click', () => track('project_open', { project: projectOf(el) }));
+  });
+  document.querySelectorAll('a[download]').forEach(el => {
+    el.addEventListener('click', () => track('resume_download', { format: 'pdf', edition: 'public_fde' }));
+  });
+  document.querySelectorAll('#contact a, .hero-cta a[href="#contact"]').forEach(el => {
+    el.addEventListener('click', () => track('contact_click', { channel: el.href.startsWith('mailto:') ? 'email' : el.href.includes('linkedin.com') ? 'linkedin' : 'section' }));
+  });
+
   // Hero CTA — intent to browse before any project is seen.
   document.querySelectorAll('.hero-cta a[href^="#"]').forEach((a) => {
-    a.addEventListener('click', () => track('cta_click', { cta: 'see_projects' }));
+    a.addEventListener('click', () => track('cta_click', { cta: a.hash === '#projects' ? 'see_projects' : 'contact' }));
   });
 
   // Language toggle — tells me which audience actually lands here.
@@ -103,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const seenCards = new Set();
     const cardObserver = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
-        const name = e.target.querySelector('h3').textContent.trim();
+        const name = e.target.id;
         if (!e.isIntersecting || seenCards.has(name)) return;
         seenCards.add(name);
         track('project_view', { project: name });
