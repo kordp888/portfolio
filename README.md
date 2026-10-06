@@ -1,158 +1,40 @@
-# Derrick Hwang
+# Derrick Hwang · Forward Deployed Engineer
 
-[![evidence](https://github.com/kordp888/portfolio/actions/workflows/evidence.yml/badge.svg)](https://github.com/kordp888/portfolio/actions/workflows/evidence.yml)
+고객 업무를 이해하고 Python·LLM/API·Next.js로 직접 구현·검증합니다. 광고 사업 창업과 고객관리·데이터분석 경험을 바탕으로 요구사항을 정리합니다.
 
-AI Product Builder turning observed friction into shipped products. I start with why, validate with evidence, then build the smallest useful system that can reach production.
+[포트폴리오](https://kordp888.github.io/portfolio/) · [공개 이력서](assets/resume/황석하_FDE_이력서_20261006.pdf) · [검증 범위](VERIFICATION.md)
 
-**[View the live portfolio](https://kordp888.github.io/portfolio/)** · **[Open the Evidence Pack](./evidence/)** · **[Read the verification record](./VERIFICATION.md)** · **[Explore the product work](#product-portfolio)**
+## 경력
 
-## Verification record
+골드문파트너스 Founder & CEO (2024.06–2025.07)로 광고 사업을 창업·운영하며 고객 유입·상담·전환 흐름을 관리했습니다. 이전에는 코네의 팀장·데이터분석 (2021.03–2022.04), JW투자진흥원의 팀장·고객관리 및 데이터분석 (2020.03–2021.03), 채움의 팀장·광고기획 (2019.03–2020.03)을 맡았습니다. FDE는 현재 목표 직무이며 과거 직책을 바꾼 것이 아닙니다.
 
-Entries past their review date stay as dated records until they are remeasured.
+## 대표 사례
 
-| Evidence | Result |
-|---|---:|
-| Release gate, scheduled pipelines | **37 of 225 attempts blocked before release, 16.4%, on 2026-09-02** |
-| ONDA discovery research | **49 community posts analyzed** |
-| ONDA delivery | **1 day from planning to production** |
-| ONDA verification | **205 tests passed across 27 files on 2026-09-06** |
-| LLM Wiki verification | **750 tests passed in a private verified environment on 2026-09-06** |
-| WESOP archived QA | **58 unit and build checks, 278 public HTTPS browser checks, on 2026-09-09** |
-| Franchise assistant persona UT | **30 → 41 of 44 correct, 7 → 9 of 12 held out, on 2026-09-29** |
-| Career Coach persona UT | **25 synthetic personas, 7 defect types found, on 2026-09-29** |
+| 고객·운영 문제 | 구현한 것 | 확인 결과와 공개 자료 |
+|---|---|---|
+| 반복되는 콘텐츠 제작과 원본 대조 | Python으로 수집·LLM 초안·음성·영상·검증·비공개 업로드 연결, 개인 구현·운영 | 2026.09.09 정리한 과거 운영 집계에서 정시 파이프라인 업로드 게이트 도달 225건 중 37건 차단. [사례](projects/content-automation/). 정확도·오류 탐지율·효율 개선률이 아니며 원시 로그를 이번에 재집계하지 않았습니다. |
+| WESOP의 업무 흐름과 AI Agent 적용 범위 | SeSAC 기업 연계 프로젝트에서 프로토타입·MVP·데이터/API 접근 범위 협의 | 프로토타입·연동 요구사항 설계. [교육용 화면](https://wesop-shopsol-prototype.vercel.app/). 합성 데이터이며 상용 연동 완료·실데이터 접근·매출 효과를 뜻하지 않습니다. |
+| 경험과 직무를 연결하는 AI 해석의 확인 | Career Insight Coach, Next.js·TypeScript 웹 프로토타입 Vercel 배포 | 사용자가 AI 해석을 확인·수정하는 화면. [웹 프로토타입](https://career-insight-coach.vercel.app/). 저장·가져오기·내보내기·오류 상황은 확인·개선 중입니다. |
 
-These measure different systems and are never added together. Every figure, its scope,
-and what it excludes live in [the evidence pack](./evidence/#숫자-한눈에), with the
-registry in [claims.json](./evidence/claims.json). Figures I could not measure, such as
-the gate false-positive rate, are recorded as not measured.
+ZENITH, 다시ON5060, 린온, ONDA는 [보조 사례](https://kordp888.github.io/portfolio/#archive)에서 개인 역할·팀 결과·진행 상태를 구분해 설명합니다. 린온은 5인 팀 해커톤입니다.
 
-## Updates, 2026-09-29
+## English
 
-Summarized from the engine commits; prompt text, rules, and source stay private.
+I am pursuing Forward Deployed Engineer roles. I define requirements using experience in founding an advertising business, customer operations and data analysis, then build and verify Python, LLM/API workflows and Next.js web prototypes.
 
-- **AI Career Insight Coach** (3 commits): public web app moved to a local model on the operator's
-  machine. Fixes from the synthetic persona UT block schema-example insight titles and literal
-  line-break codes in code, stop adding outcomes or causal links the user never stated, suppress guidance text
-  and stock closings in cover letters, and make follow-up questions quote the user's own facts.
-- **Career Coach model**: gemma4:12b chosen on 2026-09-23 from five candidates on synthetic input on a Mac Studio M1 Max 32GB
-  (industry analysis 60s, dialogue turn 10s, draft 22s; others failed on format, register, steering,
-  or time). Runs on Ollama with forced JSON, thinking off, temperature 0.3, 16,384-token context, 150-second request limit.
-  Turns usually take 5 to 8 seconds, some 40 to 50 for an unconfirmed reason. No training; load and
-  quality against an external API not measured.
-- **Franchise Operations AI Assistant** (defect fixes, UT script, re-measurement on the deployment): six
-  retrieval and intent defects fixed, each with a regression test that fails on the old code (85/85).
-  Added the 5-persona, 44-question UT script.
-- **Franchise assistant model**: six local setups (M1 Max 32GB, Ollama) and an external API were
-  benchmarked over 51 runs against a bar set in advance: zero missing required facts, under 6 seconds.
-  Best local was gemma4:12b with thinking off (6/30 adopted, 3 with missing facts, QA 27/51); the
-  external API reached QA 23/51. Thinking mode did not help. Production uses rule sentences (QA 51/51).
+The YouTube multichannel workflow connects collection, drafts, voice, video, source comparison and private upload. Historical figures compiled on 2026.09.09 report 37 blocked attempts out of 225 scheduled pipeline attempts reaching the upload gate. Raw logs were not recounted in this update. This is not accuracy, an error detection rate or an efficiency gain. Public release is a human decision.
 
-## Product portfolio
+WESOP is a SeSAC industry collaboration prototype and integration requirements exercise, not employment or completed commercial integration. Career Insight Coach is a deployed Next.js/TypeScript web prototype; save, import, export and error states remain under review and improvement.
 
-### LLM Content Operations
+## 운영
 
-A private production workflow connects market data, scripts, voice, video, review, and publishing across four channels. As of 2026-09-06, the upload path used seven representative verification categories. Source inconsistencies and safety violations stop release. The operating record contains **319 cumulative publications as of 2026-09-01**.
+정적 HTML/CSS/JavaScript와 기존 GitHub Pages main 루트 배포를 유지합니다. 한국어 기본, 영어 전환, 모바일 메뉴, 인쇄, 기본 공개 이력서 다운로드를 제공합니다. 회사별 제출용 문서와 비공개 편집 메모는 이 저장소에 포함하지 않습니다.
 
-[Inspect the synthetic release-gate evidence](./evidence/content_automation/)
-· Release-gate module: private, shown on request
+`analytics.js`의 기존 분석 설정과 이벤트 목적을 유지합니다. ID가 비어 있으면 외부 분석 요청이 없습니다. 이벤트에는 연락처, 입력값, URL 쿼리, 원문 링크 텍스트를 넣지 않습니다.
 
-### WESOP · ShopSol FLEX
+```sh
+python3 evidence/run_checks.py
+python3 -m http.server 8765
+```
 
-An educational prototype for shift staffing. A gap moves from detection to candidate comparison,
-offer, simulated acceptance, readiness check, and manager confirmation. Offering or accepting alone
-does not fill the shift, so the record holds only what a manager actually confirmed. Archived QA on
-2026-09-09 records **58 unit and build checks and 278 public HTTPS browser checks**. No real
-participants and no physical device testing.
-
-[Open the prototype](https://wesop-shopsol-prototype.vercel.app/)
-
-### ONDA
-
-A no-install driving home for the Tesla in-car browser. The product moved from **49 analyzed community posts** to a working deployment in **1 day**. As of 2026-09-06, the latest release candidate passed **205 tests across 27 files** and was blocked pending commercial voice-rights evidence.
-
-<p align="center">
-  <img src="docs/screenshots/onda.png" alt="ONDA live service start screen">
-</p>
-
-[View the ONDA showcase](https://github.com/kordp888/ONDA-for-Tesla-showcase)
-· [Inspect the GPS fallback evidence](./evidence/onda/)
-
-### LLM Wiki
-
-A locally operated knowledge system using sLLMs, agents, deterministic checks, and human approval gates. Daily check-ins and the runtime guard are active; news collection and automatic publication are paused. The private implementation passed **750 tests** on 2026-09-06. This public repository contains architecture documentation rather than the implementation or test suite.
-
-[Read the architecture](https://github.com/kordp888/llm-wiki)
-· [Inspect the additive-only sync evidence](./evidence/llm_wiki/)
-
-### 다시ON5060
-
-A voice-first AI accessibility product for older Korean adults. It guides the user through the next useful action in plain language.
-
-[Explore 다시ON5060](https://github.com/kordp888/dasi-on5060)
-
-### Signal Crew
-
-An AI-native SaaS product that unifies work, collaboration, and finance in one operating surface.
-
-[Explore Signal Crew](https://github.com/kordp888/signal-crew)
-
-### AI Career Insight Coach
-
-An AI career coach that helps candidates find job-relevant insight in their own experience instead of
-generating generic application documents. The flow moves from industry, company, and job analysis to
-experience reflection, and only then into resume, cover letter, portfolio, and interview material.
-The public repository holds the product overview, open templates, and a fictional candidate example.
-
-Since 2026-09-29 the production web app runs AI analysis on a local model (gemma4:12b) on the
-operator's Mac Studio M1 Max 32GB, and does not send it to an external AI service. Input still passes
-through the web app server and an encrypted connection to reach that machine, and AI analysis stops
-when the machine is off. The same day, **25 synthetic personas** were run end to end through dialogue,
-insight, and cover letter. Reading the output by hand found **7 defect types** the automated checks
-missed; prompts and rules were adjusted, with no model training. Re-verification covered 4 personas
-in 6 runs, not all 25, and no real users were involved.
-
-[Open the app](https://career-insight-coach.vercel.app)
-· [Explore AI Career Insight Coach](https://github.com/kordp888/career-insight-coach)
-
-### Franchise Operations AI Assistant
-
-An assistant beside the admin screen of a franchise operations SaaS. Managers ask about manuals,
-reviews, and hygiene inspections from the screen they are on, then edit and approve notice drafts.
-A deterministic rule engine decides intent, tools, and approval; the LLM is an optional summary layer
-whose sentences are discarded if they contain numbers, stores, or dates not in the data. Six local
-model setups and an external API were benchmarked over 51 runs, none met the bar of zero missing
-facts within 6 seconds, so production runs on rules. On 2026-09-29, five synthetic store-owner personas
-asked 44 scripted questions: correct answers rose from **30 to 41**, and from 7 to 9 on the 12 questions
-not used for fixing. Synthetic and dummy data only, zero real users. The client and brand are not named.
-
-[Read the case study and screens](./projects/franchise-agent/)
-
-### 세이프체크
-
-A messenger security comparison service developed by a five-person team. User tests showed that
-the first screen was being mistaken for antivirus software, so the flow was redesigned around
-that finding and iterated from v5 to v7. Team artifacts and interview transcripts remain private.
-
-### 린온
-
-A five-person hackathon product where children practice speaking with characters from Korean folk
-tales. Generated lines pass an age-focused vocabulary gate, while a three-stage fallback keeps the
-activity moving when speech or model calls fail. The implementation remains private.
-
-[Try 린온](https://lean-on-goodquestion.vercel.app)
-
-## Tools
-
-- LLM Quality Gates: release-gate module extracted from the content pipeline, 78 passing tests and one optional integration test skipped. Kept private; walkthrough available on request.
-- [career-docs](https://github.com/kordp888/career-docs-skill): a Claude Code skill for job application documents. Pins dates and metrics to one source file, checks writing for machine-like patterns, exports print quality PDFs from HTML and PPTX, and strips generator metadata. The writing checker runs standalone.
-
-## How I work
-
-- Observe real friction before defining the product.
-- Turn evidence into a narrow, testable product decision.
-- Ship to production and measure what actually happens.
-- Convert repeatable operations into reusable systems.
-
-## Links
-
-[Live portfolio](https://kordp888.github.io/portfolio/) · [GitHub](https://github.com/kordp888)
+화면은 웹에서 확인한 실제 산출물과 보존된 공개 화면을 사용합니다. 제품의 내부 규칙·프롬프트·원본 운영 자료는 추가하지 않습니다.
