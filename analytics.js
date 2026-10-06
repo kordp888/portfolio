@@ -74,9 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.card a, .card summary').forEach(el => {
     el.addEventListener('click', () => track('project_open', { project: projectOf(el) }));
   });
-  document.querySelectorAll('a[download]').forEach(el => {
-    el.addEventListener('click', () => track('resume_download', { format: 'pdf', edition: 'public_fde' }));
-  });
   document.querySelectorAll('#contact a, .hero-cta a[href="#contact"]').forEach(el => {
     el.addEventListener('click', () => track('contact_click', { channel: el.href.startsWith('mailto:') ? 'email' : el.href.includes('linkedin.com') ? 'linkedin' : 'section' }));
   });
