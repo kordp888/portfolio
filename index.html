@@ -62,6 +62,24 @@
 <h1 data-en lang="en" >I understand customer workflows<br>and turn problems into working systems.</h1>
 <p data-ko class="hero-description">광고 사업 창업과 고객관리·데이터분석 경험을 바탕으로 요구사항을 정리합니다. Python·LLM·API 작업 흐름과 Next.js 웹 프로토타입을 직접 구현하고 실행 결과와 사용자 피드백으로 개선합니다.</p>
 <p data-en lang="en" class="hero-description">My background in founding an advertising business, customer operations and data analysis helps me define requirements. I build Python, LLM and API workflows and Next.js web prototypes, then improve them using execution results and user feedback.</p>
+<ol class="flow" aria-label="작업 방식">
+<li>
+<span data-ko >고객 업무 이해</span>
+<span data-en lang="en" >Understand the customer's work</span>
+</li>
+<li>
+<span data-ko >요구사항 구체화</span>
+<span data-en lang="en" >Define requirements</span>
+</li>
+<li>
+<span data-ko >직접 구현·연동</span>
+<span data-en lang="en" >Build and integrate</span>
+</li>
+<li>
+<span data-ko >검증·개선</span>
+<span data-en lang="en" >Verify and improve</span>
+</li>
+</ol>
 <p class="availability">
 <span data-ko >서울 · 즉시 출근 가능</span>
 <span data-en lang="en" >Seoul · Available immediately</span>
@@ -172,6 +190,10 @@
 <span data-en lang="en">Scope and verification</span>
 </summary>
 <div class="detail-body">
+<h4 data-ko >대상 사용자와 내 역할</h4>
+<h4 data-en lang="en" >Users and my role</h4>
+<p data-ko >대상은 본인이 운영하는 채널의 제작·검수 작업입니다. 수집, LLM 초안, 음성·영상 연결, 원본 대조, 비공개 업로드를 개인으로 구현·운영했습니다.</p>
+<p data-en lang="en" >The users are the production and review work of channels I run myself. I implemented and operated collection, LLM drafts, voice and video connection, source comparison and private upload on my own.</p>
 <h4 data-ko >요구사항</h4>
 <h4 data-en lang="en" >Requirement</h4>
 <p data-ko >자료와 수치가 영상·자막·설명에서 일치하는지 확인할 수 있어야 했습니다.</p>
@@ -184,10 +206,14 @@
 <h4 data-en lang="en" >Integration boundary</h4>
 <p data-ko >외부 모델·음성·영상 도구와 업로드 API를 연결했습니다. 비공개 업로드 이후의 공개 결정은 사람이 맡습니다.</p>
 <p data-en lang="en" >External model, voice and video tools are connected with the upload API. Public release after private upload remains a human decision.</p>
+<h4 data-ko >제약과 설계 선택</h4>
+<h4 data-en lang="en" >Constraints and design choices</h4>
+<p data-ko >외부 모델·음성·영상 도구에 의존하므로 각 결과의 원본과 실행 상태를 남겨야 했습니다. 주체·수치·방향·출처·기준일·투자권유 위반은 다음 단계로 넘기지 않고 차단하고, 표현 길이는 경고로 둡니다. 통과해도 비공개 업로드까지만 이동하며 공개는 사람이 승인합니다.</p>
+<p data-en lang="en" >The workflow depends on external model, voice and video tools, so each output needed its source and run state recorded. Violations of subject, figure, direction, source, reference date or investment solicitation rules are blocked rather than passed on; expression length only warns. Even passing outputs stop at private upload, and a person approves publication.</p>
 <h4 data-ko >실패와 확인</h4>
 <h4 data-en lang="en" >Failure and verification</h4>
-<p data-ko >실패한 결과는 보류하고 원본과 대조해 해당 부분을 수정합니다. 과거 225/37 집계의 측정 기간과 오탐률은 이번에 확인하지 못했습니다.</p>
-<p data-en lang="en" >Failed outputs are held and the affected part is corrected against the source. The measurement period and false-positive rate for the historical 225/37 figures were not verified in this update.</p>
+<p data-ko >실패한 결과는 보류하고 원본과 대조해 해당 부분을 수정합니다. 공개 합성 하네스의 단위 테스트 10건을 2026.10.15 다시 실행해 통과했습니다. 이 결과는 합성 입력의 상태 전이만 보여 주며 비공개 운영 전체를 뜻하지 않습니다. 과거 225/37 집계의 측정 기간과 오탐률은 이번에 확인하지 못했습니다.</p>
+<p data-en lang="en" >Failed outputs are held and the affected part is corrected against the source. The 10 unit tests of the public synthetic harness were rerun and passed on 2026.10.15; they show state transitions on synthetic input only, not the private operation as a whole. The measurement period and false-positive rate for the historical 225/37 figures were not verified in this update.</p>
 </div>
 </details>
 </div>
@@ -232,6 +258,10 @@
 <span data-en lang="en">Scope and verification</span>
 </summary>
 <div class="detail-body">
+<h4 data-ko >대상 사용자</h4>
+<h4 data-en lang="en" >Users</h4>
+<p data-ko >근무 공백을 확인하고 후보를 비교해 확정하는 매장 관리자입니다.</p>
+<p data-en lang="en" >Store managers who check staffing gaps, compare candidates and confirm a shift.</p>
 <h4 data-ko >요구사항</h4>
 <h4 data-en lang="en" >Requirement</h4>
 <p data-ko >업무 담당자가 필요한 정보를 확인하고 다음 행동을 선택하는 범위를 먼저 정의했습니다.</p>
@@ -297,6 +327,10 @@
 <span data-en lang="en">Scope and verification</span>
 </summary>
 <div class="detail-body">
+<h4 data-ko >대상 사용자와 내 역할</h4>
+<h4 data-en lang="en" >Users and my role</h4>
+<p data-ko >대상은 실제 채용공고에 지원하려는 경력자, 직무 전환자, 프로젝트 경험을 직무 언어로 정리하기 어려운 취업 준비자입니다. 문제 정의, 기획, 화면 설계, 구현, 배포를 개인으로 맡았습니다.</p>
+<p data-en lang="en" >The users are experienced applicants, career changers and job seekers who find it hard to describe project experience in a role's language. I handled problem definition, planning, interface design, implementation and deployment on my own.</p>
 <h4 data-ko >요구사항</h4>
 <h4 data-en lang="en" >Requirement</h4>
 <p data-ko >사용자의 경험에 없는 성과를 보태지 않고, 해석을 직접 확인·수정할 수 있게 하는 것이 목표입니다.</p>
@@ -309,10 +343,18 @@
 <h4 data-en lang="en" >Integration boundary</h4>
 <p data-ko >Next.js 화면과 AI 요청 경로를 연결해 Vercel에 배포했습니다. 현재 저장·가져오기·내보내기 기능의 동작 범위는 재확인 중입니다.</p>
 <p data-en lang="en" >The Next.js interface and AI request path were connected and deployed on Vercel. The current behavior of save, import and export is being rechecked.</p>
+<h4 data-ko >제약과 설계 선택</h4>
+<h4 data-en lang="en" >Constraints and design choices</h4>
+<p data-ko >합격률·적합도 점수는 만들지 않습니다. 검증되지 않은 예측이 사용자의 판단을 왜곡할 수 있어서입니다. 채용공고 URL 자동 수집은 보안과 출처 신뢰성 때문에 첫 버전에서 빼고 공고를 직접 붙여 넣게 했습니다. 로그인과 클라우드 저장 대신 브라우저 저장으로 먼저 가치를 확인합니다.</p>
+<p data-en lang="en" >It does not produce acceptance-rate or fit scores, because an unverified prediction can distort the user's judgment. Automatic job-posting URL collection was left out of the first version for security and source-reliability reasons, so users paste the posting. Browser storage replaces login and cloud storage while the value is still being checked.</p>
+<h4 data-ko >데이터 흐름과 실패 대응</h4>
+<h4 data-en lang="en" >Data flow and failure handling</h4>
+<p data-ko >입력은 브라우저에 저장되고, AI 분석 버튼을 누르면 서버 AI 분석 API로 전달됩니다. 응답은 형식을 검사해 화면에 반영하며 불완전한 응답은 버립니다. 분석이 실패하면 예시 결과로 대체하지 않고 오류를 표시합니다.</p>
+<p data-en lang="en" >Input is stored in the browser and sent to the server-side AI analysis API only when the analysis button is pressed. Responses are shape-checked before reaching the screen and incomplete ones are discarded. A failed analysis shows an error instead of falling back to sample results.</p>
 <h4 data-ko >실패와 확인</h4>
 <h4 data-en lang="en" >Failure and verification</h4>
-<p data-ko >AI 출력은 확인 전 후보로 다룹니다. 오류 안내와 수정 흐름을 점검하며, 이 페이지의 제작을 제품 전체 재검증으로 표시하지 않습니다.</p>
-<p data-en lang="en" >AI output is treated as a candidate pending review. Error guidance and editing flows are being checked; this portfolio update is not a full product revalidation.</p>
+<p data-ko >AI 출력은 확인 전 후보로 다룹니다. 2026.10.15 배포 커밋과 같은 코드에서 작업 공간 로직 테스트 19건이 로컬에서 통과했습니다. 내보내기·불러오기 왕복, 잘못된 스키마 거부, 선택하지 않은 경험과 승인하지 않은 인사이트를 문서에 쓰지 않는 규칙, 경험 변경 시 이전 결과 무효화를 포함합니다. 같은 날과 2026.10.16 점검에서 AI 연결은 꺼져 있었습니다(상태 응답 ai:false). 2026.10.17부터 AI 분석 경로를 운영자 기기의 로컬 모델에서 포텐스닷 API로 다시 바꾸고 있으며, 전환 뒤에는 분석을 요청한 입력이 포텐스닷으로 전달됩니다. 분석 엔진은 웹앱 서버만 호출할 수 있게 닫았습니다. 연결 확인 전이라 AI 응답 경로의 현재 동작은 확인하지 못했고, AI 응답의 사실 정확도와 사용자 효과는 측정하지 않았습니다.</p>
+<p data-en lang="en" >AI output is treated as a candidate pending review. On 2026.10.15, 19 workspace-logic tests passed locally on the same code as the deployed commit. They cover export and import round trips, rejection of malformed schemas, a rule that documents use only selected experiences and approved insights, and invalidation of earlier results when an experience changes. Checks that day and on 2026.10.16 showed the AI connection off (status response ai:false). From 2026.10.17 the analysis path is being moved back from the operator's local model to the Potens.dot API; after the switch, input submitted for analysis is sent to Potens.dot. The analysis engine is closed so that only the web app server can call it. Until the connection is confirmed, the current behavior of the AI response path is unverified; factual accuracy of AI responses and user effect were not measured.</p>
 </div>
 </details>
 </div>
@@ -325,6 +367,41 @@
 <span data-en lang="en" >Existing public screenshot using synthetic test experience, not an actual applicant’s data.</span>
 </figcaption>
 </figure>
+</article>
+</section>
+<section class="wrap" id="work24">
+<div class="section-heading">
+<h2 data-ko >진행 중 · 제출 완료, 검증 준비 중</h2>
+<h2 data-en lang="en" >In progress · Submitted, validation pending</h2>
+</div>
+<article class="case-card card solo" id="work24-idea" data-project="work24">
+<div class="case-text">
+<h3 data-ko >공고 요구와 경험 근거 비교 · 고용24 공모전 기획안</h3>
+<h3 data-en lang="en" >Comparing posting requirements with experience evidence · Work24 contest proposal</h3>
+<p data-ko class="status">2026.10.13 개인 참가 기획안 제출 · 접수 본인 확인 · 선정 미정 · 구현 전</p>
+<p data-en lang="en" class="status">Individual proposal submitted 2026.10.13 · Receipt confirmed by me · Selection pending · Not yet built</p>
+<p data-ko class="problem">학력 정보만으로 드러나지 않는 수행 경험을 공고의 업무 언어로 설명하되, 학력·자격·경력 필수조건은 그대로 남겨야 했습니다.</p>
+<p data-en lang="en" class="problem">Work experience that education records do not show had to be explained in a posting's language, while education, certification and experience requirements stayed visible as they are.</p>
+<p data-ko >공고 한 건의 요구 문장과 선택한 경험 문장을 인용으로 연결하고, 요구마다 근거상 연결됨·부분 근거·확인 필요·입력상 명시조건 미충족 중 하나로 표시하는 설계입니다. 공고를 적합도 점수 하나로 줄이지 않고, AI는 연결 후보만 내며 명시조건과 인용은 규칙으로 검사합니다. 학력 미기재는 미충족이 아니라 확인 필요입니다.</p>
+<p data-en lang="en" >The design links one posting's requirement sentences to selected experience sentences by quotation and marks each requirement as linked by evidence, partial evidence, needs confirmation, or explicit requirement unmet by input. It does not reduce a posting to one fit score; AI only proposes links, while explicit conditions and quotations are checked by rules. Missing education is "needs confirmation", not "unmet".</p>
+<p data-ko >문제 제기, 최종 설계 선택, 문서 검토는 본인이 했고 자료 조사와 문서 초안은 AI가 보조했습니다. 제출안에도 그렇게 적었습니다.</p>
+<p data-en lang="en" >I raised the problem, made the final design choices and reviewed the document; AI assisted with research and drafting, as the proposal itself states.</p>
+<div class="result">
+<h4 data-ko >확인 상태</h4>
+<h4 data-en lang="en" >Status of checks</h4>
+<p data-ko >2026.10.16 합성 검증 자료(공고 10건, 요구 60개, 인용 120구간)의 구조·참조·인용 검사가 통과했고, 자료를 일부러 훼손한 7가지 경우는 검사기가 모두 거부했습니다. 개발 검토용 보조 사례 8개의 자료 검수 15개도 같은 날 통과했습니다. 정답표는 사람 검토 전이고, 모델 성능·앱 통합·사용자 비교는 실행하지 않았습니다. 추출 90%·인용 일치 100% 등은 목표이며 측정 결과가 아닙니다.</p>
+<p data-en lang="en" >On 2026.10.16, structure, reference and quotation checks passed on the synthetic validation set (10 postings, 60 requirements, 120 quoted spans), and the checker rejected all seven deliberately corrupted variants. Fifteen data checks on eight synthetic development-review cases also passed that day. The answer key has not been reviewed by a person, and model performance, app integration and user comparison have not been run. Targets such as 90% extraction and 100% quotation match are goals, not measurements.</p>
+<p data-ko class="scope">개발 기간은 10.23–11.05입니다. 사전 개발 허용 범위가 확인되지 않아 제출용 기능은 만들지 않았습니다. Career Insight Coach의 기존 기능을 이 기획의 구현으로 보지 않습니다.</p>
+<p data-en lang="en" class="scope">The development period is Oct 23 to Nov 5. Because the allowed scope of earlier development is unconfirmed, no submission feature was built. Existing Career Insight Coach features are not counted as this proposal's implementation.</p>
+</div>
+<div class="case-links">
+<a href="https://github.com/kordp888/portfolio/blob/main/docs/case-studies/work24.md" target="_blank" rel="noopener noreferrer" data-track="project">
+<span data-ko >사례 문서와 검증 계획</span>
+<span data-en lang="en" >Case notes and verification plan</span>
+<span aria-hidden="true"> ↗</span>
+</a>
+</div>
+</div>
 </article>
 </section>
 <section class="wrap" id="archive">
@@ -409,6 +486,11 @@
 <span data-en lang="en" >Public evidence</span>
 <span aria-hidden="true"> ↗</span>
 </a>
+<a href="https://github.com/kordp888/portfolio/blob/main/docs/portfolio-evidence.md" target="_blank" rel="noopener noreferrer" data-track="project">
+<span data-ko >주장별 근거표</span>
+<span data-en lang="en" >Claim-by-claim evidence</span>
+<span aria-hidden="true"> ↗</span>
+</a>
 </div>
 </section>
 <section class="wrap compact" id="process">
@@ -440,7 +522,7 @@
 <a href="https://github.com/kordp888" target="_blank" rel="noopener noreferrer" data-track="contact">GitHub<span aria-hidden="true"> ↗</span>
 </a>
 </div>
-<p class="footer-meta">황석하 · Derrick Hwang · 2026.10.06</p>
+<p class="footer-meta">황석하 · Derrick Hwang · 2026.10.17</p>
 </div>
 </footer>
 </body>

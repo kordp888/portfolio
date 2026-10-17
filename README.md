@@ -16,6 +16,10 @@
 | WESOP의 업무 흐름과 AI Agent 적용 범위 | SeSAC 기업 연계 프로젝트에서 프로토타입·MVP·데이터/API 접근 범위 협의 | 프로토타입·연동 요구사항 설계. [교육용 화면](https://wesop-shopsol-prototype.vercel.app/). 합성 데이터이며 상용 연동 완료·실데이터 접근·매출 효과를 뜻하지 않습니다. |
 | 경험과 직무를 연결하는 AI 해석의 확인 | Career Insight Coach, Next.js·TypeScript 웹 프로토타입 Vercel 배포 | 사용자가 AI 해석을 확인·수정하는 화면. [초대 코드가 필요한 베타 웹](https://career-insight-coach.vercel.app/). 저장·가져오기·내보내기·오류 상황은 확인·개선 중입니다. |
 
+진행 중 사례: 2026.10.13 고용24 공모전에 「공고 요구와 경험 근거 비교」 기획안을 개인 참가로 제출했습니다. 접수는 본인 확인이며 선정은 정해지지 않았습니다. 구현과 모델 성능은 검증 전입니다. [사례 문서](docs/case-studies/work24.md).
+
+각 주장의 상태(measured, target, not_run, unverified)와 날짜는 [근거표](docs/portfolio-evidence.md)에 있습니다.
+
 ZENITH, 다시ON5060, 린온, ONDA는 [보조 사례](https://kordp888.github.io/portfolio/#archive)에서 개인 역할·팀 결과·진행 상태를 구분해 설명합니다. 린온은 5인 팀 해커톤입니다.
 
 ## English
@@ -25,6 +29,8 @@ I am pursuing Forward Deployed Engineer roles. I define requirements using exper
 The YouTube multichannel workflow connects collection, drafts, voice, video, source comparison and private upload. Historical figures compiled on 2026.09.09 report 37 blocked attempts out of 225 scheduled pipeline attempts reaching the upload gate. Raw logs were not recounted in this update. This is not accuracy, an error detection rate or an efficiency gain. Public release is a human decision.
 
 WESOP is a SeSAC industry collaboration prototype and integration requirements exercise, not employment or completed commercial integration. Career Insight Coach is a deployed Next.js/TypeScript web prototype that currently requires an invitation code; save, import, export and error states remain under review and improvement.
+
+In progress: an individual proposal, "Comparing posting requirements with experience evidence", was submitted to the Work24 contest on 2026.10.13. I confirmed receipt myself; selection is pending, and implementation and model performance are not yet verified.
 
 ## 운영
 
